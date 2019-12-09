@@ -30,7 +30,7 @@
 		<!--单元测试包 -->
 		<junit.version>4.12</junit.version>
 		<!-- akka-actor -->
-		<akka-actor.version>2.5.11</akka-actor.version>
+		<akka-actor.version>2.6.1</akka-actor.version>
 		<!-- MySql -->
 		<mysql.version>5.1.40</mysql.version>
 		<servlet-api.version>3.1.0</servlet-api.version>
