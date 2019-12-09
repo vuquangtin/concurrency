@@ -103,7 +103,7 @@
 		<dependency>
 			<groupId>com.typesafe.akka</groupId>
 			<artifactId>akka-actor_2.12</artifactId>
-			<version>${akka-actor.version}</version>
+			<version>[2.5.16,)</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-slf4j -->
 		<dependency>
