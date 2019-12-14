@@ -1,4 +1,4 @@
-package synchronizers;
+package synchronizers.phaser;
 
 import java.util.concurrent.Phaser;
 

@@ -1,4 +1,4 @@
-package synchronizers;
+package synchronizers.cyclicbarrier;
 
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;

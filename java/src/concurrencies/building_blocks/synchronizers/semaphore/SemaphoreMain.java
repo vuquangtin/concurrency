@@ -1,4 +1,4 @@
-package synchronizers;
+package synchronizers.semaphore;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;

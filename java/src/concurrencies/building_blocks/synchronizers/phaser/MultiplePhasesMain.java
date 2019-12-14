@@ -1,4 +1,4 @@
-package synchronizers;
+package synchronizers.phaser;
 
 import java.util.ArrayList;
 import java.util.Collections;

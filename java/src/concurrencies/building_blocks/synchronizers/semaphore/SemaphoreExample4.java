@@ -1,4 +1,4 @@
-package synchronizers;
+package synchronizers.semaphore;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -9,8 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.Logger;
 
 @Slf4j
-public class SemaphoreExample {
-	static Logger logger = Logger.getLogger(SemaphoreExample.class.getName());
+public class SemaphoreExample4 {
+	static Logger logger = Logger.getLogger(SemaphoreExample4.class.getName());
     private final static int threadCount = 200;
 
     public static void main(String[] args) {

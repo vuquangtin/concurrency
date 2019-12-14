@@ -1,8 +1,10 @@
-package synchronizers;
+package synchronizers.cyclicbarrier;
 
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
+
+import synchronizers.Data;
 
 /**
  * Design Patterns

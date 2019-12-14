@@ -1,12 +1,12 @@
-package synchronizers;
+package synchronizers.semaphore;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
-import lombok.extern.slf4j.Slf4j;
-
 import org.apache.log4j.Logger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author panghu
@@ -16,7 +16,7 @@ import org.apache.log4j.Logger;
  * @date 19-2-26 上午9:42
  */
 @Slf4j
-public class SemaphoreExample1 {
+public class SemaphoreExample2 {
 	static Logger logger = Logger.getLogger(SemaphoreExample.class.getName());
     private static int threadCount = 20;
 
@@ -31,11 +31,11 @@ public class SemaphoreExample1 {
             final int threadNum = i;
             executorService.execute(()->{
                 try{
-                    //获得一个许可
-                    semaphore.acquire();
+                    //获得多个许可
+                    semaphore.acquire(3);
                     test(threadNum);
-                    //释放一个许可
-                    semaphore.release();
+                    //释放多个许可
+                    semaphore.release(3);
                 }catch (Exception e){
                     logger.error("Exception:{}",e);
                 }

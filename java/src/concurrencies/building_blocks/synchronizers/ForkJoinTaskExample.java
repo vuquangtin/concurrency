@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 
 @Slf4j
 public class ForkJoinTaskExample extends RecursiveTask<Integer> {
-	static Logger logger = Logger.getLogger(CutDownLatchExample2.class.getName());
+	static Logger logger = Logger.getLogger(ForkJoinTaskExample.class.getName());
     public static final int threshold = 2;
     private int start;
     private int end;

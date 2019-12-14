@@ -1,4 +1,4 @@
-package synchronizers;
+package synchronizers.cyclicbarrier;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

@@ -1,4 +1,4 @@
-package synchronizers;
+package synchronizers.cyclicbarrier;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
@@ -11,8 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.Logger;
 
 @Slf4j
-public class CyclicBarrierExample {
-	static Logger logger = Logger.getLogger(CutDownLatchExample2.class.getName());
+public class CyclicBarrierExample4 {
+	static Logger logger = Logger.getLogger(CyclicBarrierExample4.class.getName());
     /**
      *  同步等待的线程数,
      */

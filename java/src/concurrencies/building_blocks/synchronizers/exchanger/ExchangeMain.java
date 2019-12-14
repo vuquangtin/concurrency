@@ -1,4 +1,4 @@
-package synchronizers;
+package synchronizers.exchanger;
 
 import java.util.ArrayList;
 import java.util.concurrent.Exchanger;

@@ -1,11 +1,9 @@
-package synchronizers;
+package synchronizers.cyclicbarrier;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,9 +17,11 @@ import org.apache.log4j.Logger;
  * @date 19-2-26 上午11:38
  */
 @Slf4j
-public class CyclicBarrierExample2 {
-	static Logger logger = Logger.getLogger(CutDownLatchExample2.class.getName());
-    private static CyclicBarrier cyclicBarrier = new CyclicBarrier(5);
+public class CyclicBarrierExample3 {
+	static Logger logger = Logger.getLogger(CyclicBarrierExample3.class.getName());
+    private static CyclicBarrier cyclicBarrier = new CyclicBarrier(5,()->{
+        logger.info("callback is running");
+    });
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -46,8 +46,8 @@ public class CyclicBarrierExample2 {
         logger.info("{} is ready"+threadNum);
         try {
             //当执行await方法的线程达到指定的数目的时候就可以执行下面的方法了
-            cyclicBarrier.await(2000, TimeUnit.MILLISECONDS);
-        }catch (BrokenBarrierException | TimeoutException e){
+            cyclicBarrier.await();
+        }catch (BrokenBarrierException e){
             logger.error("{}",e);
         }
         logger.info("{} continue"+threadNum);
