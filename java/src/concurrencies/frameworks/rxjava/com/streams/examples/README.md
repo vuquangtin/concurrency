@@ -574,7 +574,7 @@ public class ReduceStreamExample {
     }
 }
 ```
-### 3. Stream API với I/O
+## 3. Stream API với I/O
 Như chúng tôi đã đề cập trước đây, Stream API không chỉ hỗ trợ các thao tác với các Collection, Array. Các hoạt động I/O trên tập tin như đọc file văn bản theo từng dòng (line) cũng có thể áp dụng với Stream API. Hãy xem ví dụ sau:
 
 Chúng ta cần đọc những dòng dữ liệu có chữ bắt đầu là line3 của tập tin line.txt sau:
@@ -621,7 +621,7 @@ public class ReadFileWithStreamExample {
 
 Phương thức onClose() trong đoạn code trên được gọi khi phương thức close() được gọi trên Stream.
 
-### 4. Luồng song song – Parallel Streams
+## 4. Luồng song song – Parallel Streams
 Như đã đề cập ở trên, các stream có thể là tuần tự (sequential) hoặc song song (parallel). Các thao tác trên các stream tuần tự được thực hiện trên một luồng đơn (single thread) trong khi các phép toán trên các stream song song được thực hiện đồng thời trên nhiều luồng (multi-thread).
 
 <img src='../../../../../../resources/images/parallel-sequential.png'/>
@@ -634,7 +634,7 @@ Chúng ta thường sử dụng Parallel Streams trong môi trường multi-thre
 
 Hãy xem ví dụ sau:đầu tiên chúng ta sẽ tạo một danh sách dữ liệu lớn, sau đó chúng ta sẽ sắp xếp danh sách này sử dụng stream() và parallelStream().
 
-#### Sequential Stream
+### 4.1 Sequential Stream
 
 ```java
  
@@ -674,7 +674,7 @@ public class SequentialStreamExample {
 }
 ```
 
-#### Parallel Stream
+### 4.2 Parallel Stream
 
 ```java
 import java.util.ArrayList;
@@ -715,7 +715,7 @@ public class ParallelStreamExample {
 
 Như bạn thấy cả hai đoạn code gần giống nhau nhưng sắp xếp song song nhanh hơn gần 50%. Tất cả những gì bạn phải làm là thay stream() thành parallelStream().
 
-### Hạn chế của Stream
+## 5. Hạn chế của Stream
 Stream không thể tái sử dụng một khi đã gọi Terminal Operations:
 
 ```java
