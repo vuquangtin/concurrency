@@ -46,9 +46,14 @@ import java.util.List;
 
 public class StreamExample {
 
-	List<Integer> numbers = Arrays.asList(7, 2, 5, 4, 2, 1);
+	static List<Integer> numbers = Arrays.asList(7, 2, 5, 4, 2, 1);
 
-	public void withoutStream() {
+	public static void main(String[] args) {
+		withoutStream();
+		withStream();
+	}
+
+	public static void withoutStream() {
 		long count = 0;
 		for (Integer number : numbers) {
 			if (number % 2 == 0) {
@@ -58,9 +63,9 @@ public class StreamExample {
 		System.out.printf("There are %d elements that are even", count);
 	}
 
-	public void withStream() {
+	public static void withStream() {
 		long count = numbers.stream().filter(num -> num % 2 == 0).count();
-		System.out.printf("There are %d elements that are even", count);
+		System.out.printf("\nThere are %d elements that are even", count);
 	}
 
 }
@@ -69,13 +74,13 @@ Thực thi chương trình trên ta thấy cả hai phương thức đều cho k
 
 Với phương thức withoutStream(), chúng ta đang lặp lại toàn bộ danh sách để tìm các số chẵn. Không có xử lý song song trong phương thức này.
 
-Với phương thức withStream(), phương thức stream() trả về một luồng của tất cả các number, phương thức filter() trả về một stream các các số chẵn, phương thức count() trả về số phần tử là số chẵn của stream. Tất cả các hoạt động này đang xảy ra song song, có nghĩa là chúng ta có thể thực hiện song song code với sự trợ giúp của stream. Việc thực hiện song song các hoạt động sử dụng stream nhanh hơn thực thi tuần tự mà không cần sử dụng stream.
+Với phương thức withStream(), phương thức stream() trả về một luồng của tất cả các number, phương thức filter() trả về một stream các số chẵn, phương thức count() trả về số phần tử là số chẵn của stream. Tất cả các hoạt động này đang xảy ra song song, có nghĩa là chúng ta có thể thực hiện song song code với sự trợ giúp của stream. Việc thực hiện song song các hoạt động sử dụng stream nhanh hơn thực thi tuần tự mà không cần sử dụng stream.
 
 ### 1.2 Một số phương thức của Stream
 Trong Java 8, Collection interface được hỗ trợ 2 phương thức để tạo ra Stream bao gồm:
 
-* stream() : trả về một stream sẽ được xử lý theo tuần tự.
-* parallelStream() : trả về một Stream song song, các xử lý sau đó sẽ thực hiện song song.
+* <b>stream()</b> : trả về một stream sẽ được xử lý theo tuần tự.
+* <b>parallelStream()</b> : trả về một Stream song song, các xử lý sau đó sẽ thực hiện song song.
 
 ### 1.3 Các đặc điểm của Java Stream
 * Stream không lưu trữ các phần tử của collection hay array. Nó chỉ thực hiện các phép toán tổng hợp (chẳng hạn như filter() và count() mà chúng ta đã thấy trong ví dụ trên để có được stream dữ liệu mong muốn.
@@ -90,9 +95,9 @@ Trong Java 8, Collection interface được hỗ trợ 2 phương thức để t
 ### 1.4 So sánh Streams với Collections
 Chúng ta sử dụng Stream hoặc Collection khi chúng ta phải làm việc theo danh sách các phần tử.
 
-Collection là cấu trúc dữ liệu chứa các phần tử trong bộ nhớ. Những phần tử này sẽ được tính toán trước khi chúng thực sự được thêm vào Collection.
+* Collection là cấu trúc dữ liệu chứa các phần tử trong bộ nhớ. Những phần tử này sẽ được tính toán trước khi chúng thực sự được thêm vào Collection.
 
-Ngược lại, Stream không phải là một cấu trúc dữ liệu. Stream là một luồng thực hiện tính toán các phần tử theo yêu cầu. Vì vậy, nó có thể được xem rằng các Collection có các yếu tố tính tức thời (eager), trong khi các Stream có yếu tố tính lười biếng (lazy).
+* Ngược lại, Stream không phải là một cấu trúc dữ liệu. Stream là một luồng thực hiện tính toán các phần tử theo yêu cầu. Vì vậy, nó có thể được xem rằng các Collection có các yếu tố tính tức thời (eager), trong khi các Stream có yếu tố tính lười biếng (lazy).
 
 Mặc dù chúng ta có thể tạo Stream từ Collection và sử dụng một số phương thức trên Collection. Tuy nhiên, Collection gốc vẫn không thay đổi. Do đó, Stream không thể thay đổi dữ liệu.
 
@@ -105,7 +110,11 @@ Như chúng ta đã thấy trong ví dụ trên, hoạt động của luồng c�
 * Thực hiện các thao tác trung gian (intermediate operations) trên stream ban đầu để chuyển đổi nó thành một stream khác và tiếp tục thực hiện các hoạt động trung gian khác. Trong ví dụ trên, hoạt động filter() là hoạt động trung gian. Có thể có nhiều hoạt động trung gian.
 * Thực hiện thao tác đầu cuối (terminal operation) trên stream cuối cùng để nhận kết quả và sau đó bạn không thể sử dụng lại chúng. Trong ví dụ trên, phép tính count() là hoạt động đầu cuối.
 
-Một Stream pipeline bao gồm: 1 stream source, 0 hoặc nhiều intermediate operation, và 1 terminal operation.
+Một Stream pipeline bao gồm:
+
+* 1 stream source, 
+* 0 hoặc nhiều intermediate operation, 
+* và 1 terminal operation.
 
 Hình dưới minh họa các thao tác với Stream:
 
@@ -113,9 +122,9 @@ Hình dưới minh họa các thao tác với Stream:
 
 ## 2. Một vài ví dụ về Stream
 ### 2.1 Tạo Stream
-Interface Stream trong package java.util.stream là interface đại diện cho một Stream. Interface này chỉ làm việc với kiểu dữ liệu là Object.
+Interface ```Stream ``` trong package java.util.stream là interface đại diện cho một Stream. Interface này chỉ làm việc với kiểu dữ liệu là Object.
 
-Với các kiểu primitive thì các bạn có thể sử dụng các đối tượng Stream dành cho những kiểu primitive đó, ví dụ như IntStream, LongStream hay DoubleStream.
+Với các kiểu primitive hì các bạn có thể sử dụng các đối tượng Stream dành cho những kiểu primitive đó, ví dụ như IntStream, LongStream hay DoubleStream.
 
 #### 2.1.1 Tạo Stream cho những kiểu primitive
 
@@ -154,6 +163,13 @@ import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 public class ConvertToStreamExample {
+	public static void main(String[] args) {
+		streamFromArray();
+		streamFromCollection();
+		streamUsingGenerate();
+		streamUsingIterate();
+		streamUsingRegex();
+	}
 
 	// Generate Streams from Arrays using .stream or Stream.of
 	public static void streamFromArray() {
@@ -213,6 +229,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
  
 public class ConvertFromStreamExample {
+	public static void main(String[] args) {
+		getCollectionUsingStreamCollection();
+		getArrayUsingStreamToArray();
+	}
  
     // Get Collections using stream.collect(Collectors.toList())
     public static void getCollectionUsingStreamCollection() {
@@ -234,7 +254,7 @@ public class ConvertFromStreamExample {
 Có thể sử dụng 0 hoặc nhiều intermediate operations để chuyển đổi Stream ban đầu thành những Stream mới. Mặc dù chúng ta có thể định nghĩa nhiều intermediate operation nhưng chúng không thực thi các thao tác đó ngay lập tức, chỉ khi terminal operation được gọi thì toàn bộ các thao tác đó mới được thực thi,
 
 #### 2.2.1 Sử dụng filter()
-Stream filter() giúp loại bỏ các phần tử dựa trên các tiêu chí nhất định.
+>Stream filter() giúp loại bỏ các phần tử dựa trên các tiêu chí nhất định.
 
 Ví dụ sử dụng để lọc các số chia hết cho 3.
 
@@ -283,7 +303,7 @@ public class LimitStreamExample {
 }
 ```
 #### 2.2.3 Sử dụng map()
-Stream map() giúp ánh xạ các phần tử tới các kết quả tương ứng.
+>Stream map() giúp ánh xạ các phần tử tới các kết quả tương ứng.
 
 ```java
 package com.streams.examples;
@@ -438,45 +458,34 @@ Ví dụ sử dụng min(), max() với các class wrapper của kiểu dữ li�
 ```java
 package com.streams.examples;
 
-
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
- 
+
 public class MinMaxStreamExample1 {
- 
-    public static void main(String[] args) {
-        Integer []numbers = {1, 8, 3, 4, 5, 7, 9, 6};
-         
-        // Find max, min with Array ====================
-         
-        // Max = 9
-        Integer maxNumber = Stream.of(numbers)
-                .max(Comparator.comparing(Integer::valueOf))
-                .get();
- 
-        // Min = 1
-        Integer minNumber = Stream.of(numbers)
-                .min(Comparator.comparing(Integer::valueOf))
-                .get();
-         
-        // Find max, min with Collection ====================
-        List<Integer> listOfIntegers = Arrays.asList(numbers);
- 
-        // Max = 9
-        Integer max = listOfIntegers.stream()
-                .mapToInt(v -> v)
-                .max()
-                .getAsInt(); 
-         
-        // Min = 1
-        Integer min = listOfIntegers.stream()
-                .mapToInt(v -> v)
-                .min()
-                .getAsInt(); 
-    }
+
+	public static void main(String[] args) {
+		Integer[] numbers = { 1, 8, 3, 4, 5, 7, 9, 6 };
+
+		// Find max, min with Array ====================
+
+		// Max = 9
+		Integer maxNumber = Stream.of(numbers).max(Comparator.comparing(Integer::valueOf)).get();
+		System.out.println("Max:" + maxNumber);
+		// Min = 1
+		Integer minNumber = Stream.of(numbers).min(Comparator.comparing(Integer::valueOf)).get();
+		System.out.println("Min:" + minNumber);
+		// Find max, min with Collection ====================
+		List<Integer> listOfIntegers = Arrays.asList(numbers);
+
+		// Max = 9
+		Integer max = listOfIntegers.stream().mapToInt(v -> v).max().getAsInt();
+		System.out.println("Max:" + max);
+		// Min = 1
+		Integer min = listOfIntegers.stream().mapToInt(v -> v).min().getAsInt();
+		System.out.println("Min:" + min);
+	}
 }
 ```
 
@@ -537,22 +546,24 @@ public class MinMaxStreamExample2 {
 >Phương thức summaryStatistics() được sử dụng để lấy giá trị count, min, max, sum và average với tập dữ liệu số.
 
 ```java
+package com.streams.examples;
+
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 import java.util.List;
- 
+
 public class IntSummaryStatisticsExample {
- 
-    public static void main(String[] args) {
-        List<Integer> primes = Arrays.asList(2, 3, 5, 7, 10);
- 
-        IntSummaryStatistics stats = primes.stream().mapToInt((x) -> x).summaryStatistics();
-        System.out.println("Count: " + stats.getCount());
-        System.out.println("Max: " + stats.getMax());
-        System.out.println("Min: " + stats.getMin());
-        System.out.println("Sum: " + stats.getSum());
-        System.out.println("Average: " + stats.getAverage());
-    }
+
+	public static void main(String[] args) {
+		List<Integer> primes = Arrays.asList(2, 3, 5, 7, 10);
+
+		IntSummaryStatistics stats = primes.stream().mapToInt((x) -> x).summaryStatistics();
+		System.out.println("Count: " + stats.getCount());
+		System.out.println("Max: " + stats.getMax());
+		System.out.println("Min: " + stats.getMin());
+		System.out.println("Sum: " + stats.getSum());
+		System.out.println("Average: " + stats.getAverage());
+	}
 }
 ```
 
@@ -561,8 +572,10 @@ public class IntSummaryStatisticsExample {
 
 ```java 
  
+package com.streams.examples;
+
 import java.util.stream.IntStream;
- 
+
 public class ReduceStreamExample {
  
     // reduce() operation combines the stream elements into one using a
@@ -591,8 +604,8 @@ line4
 Chương trình của chúng ta như sau:
 
 ```java
+package com.streams.examples;
 
- 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -602,7 +615,7 @@ public class ReadFileWithStreamExample {
  
     public static void main(String args[]) {
  
-        String fileName = "lines.txt";
+        String fileName = "java/src/resources/lines.txt";
  
         // read file into stream, try-with-resources
         try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
@@ -638,6 +651,8 @@ Hãy xem ví dụ sau:đầu tiên chúng ta sẽ tạo một danh sách dữ li
 
 ```java
  
+package com.streams.examples;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -677,6 +692,8 @@ public class SequentialStreamExample {
 ### 4.2 Parallel Stream
 
 ```java
+package com.streams.examples;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -720,8 +737,10 @@ Stream không thể tái sử dụng một khi đã gọi Terminal Operations:
 
 ```java
  
+package com.streams.examples;
+
 import java.util.stream.Stream;
- 
+
 public class ErrorStreamExample {
  
     public static void main(String[] args) {
@@ -747,6 +766,8 @@ Exception in thread "main" java.lang.IllegalStateException: stream has already b
 
 ```java
  
+package com.streams.examples;
+
 import java.util.function.Supplier;
 import java.util.stream.Stream;
  

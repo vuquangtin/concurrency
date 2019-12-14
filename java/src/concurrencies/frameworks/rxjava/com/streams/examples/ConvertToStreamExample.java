@@ -7,6 +7,13 @@ import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 public class ConvertToStreamExample {
+	public static void main(String[] args) {
+		streamFromArray();
+		streamFromCollection();
+		streamUsingGenerate();
+		streamUsingIterate();
+		streamUsingRegex();
+	}
 
 	// Generate Streams from Arrays using .stream or Stream.of
 	public static void streamFromArray() {

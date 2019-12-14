@@ -6,6 +6,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
  
 public class ConvertFromStreamExample {
+	public static void main(String[] args) {
+		getCollectionUsingStreamCollection();
+		getArrayUsingStreamToArray();
+	}
  
     // Get Collections using stream.collect(Collectors.toList())
     public static void getCollectionUsingStreamCollection() {
