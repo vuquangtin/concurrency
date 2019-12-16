@@ -1,5 +1,14 @@
 package concurrencies.frameworks.hystrixs.commands;
 
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufInputStream;
+import io.reactivex.netty.client.RxClient;
+import io.reactivex.netty.client.RxClient.ClientConfig.Builder;
+import io.reactivex.netty.protocol.http.client.HttpClient;
+import io.reactivex.netty.protocol.http.client.HttpClientBuilder;
+import io.reactivex.netty.protocol.http.client.HttpClientRequest;
+import io.reactivex.netty.protocol.http.client.HttpClientResponse;
+
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,16 +22,6 @@ import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixCommandKey;
 import com.netflix.hystrix.HystrixCommandProperties;
 import com.netflix.hystrix.HystrixObservableCommand;
-
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.ByteBufInputStream;
-
-import io.reactivex.netty.client.RxClient;
-import io.reactivex.netty.protocol.http.client.HttpClient;
-import io.reactivex.netty.protocol.http.client.HttpClientBuilder;
-import io.reactivex.netty.protocol.http.client.HttpClientRequest;
-import io.reactivex.netty.protocol.http.client.HttpClientResponse;
-import io.reactivex.netty.client.RxClient.ClientConfig.Builder;
 
 /**
  * This is a NIO example using HystrixObserableCommand and RxNetty.

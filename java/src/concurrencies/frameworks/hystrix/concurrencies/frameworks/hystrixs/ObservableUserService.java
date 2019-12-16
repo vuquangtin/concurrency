@@ -1,10 +1,12 @@
 package concurrencies.frameworks.hystrixs;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.ObservableExecutionMode;
 import org.springframework.stereotype.Service;
+
 import rx.Observable;
 import rx.Subscriber;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.ObservableExecutionMode;
 
 @Service
 public class ObservableUserService {

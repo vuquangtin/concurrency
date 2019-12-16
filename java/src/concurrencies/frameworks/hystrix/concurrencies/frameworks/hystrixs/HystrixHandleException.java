@@ -1,7 +1,8 @@
 package concurrencies.frameworks.hystrixs;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.stereotype.Service;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service
 public class HystrixHandleException {

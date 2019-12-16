@@ -5,9 +5,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Logger;
-
 import lombok.extern.slf4j.Slf4j;
+
+import org.apache.log4j.Logger;
 
 /**
  * @author panghu

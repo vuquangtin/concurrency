@@ -1,11 +1,11 @@
 package concurrencies.frameworks.hystrixs.test;
 
+import java.util.Iterator;
+
 import org.junit.Test;
 
-import concurrencies.frameworks.hystrixs.ObservableCommandHelloWorld;
 import rx.Observable;
-
-import java.util.Iterator;
+import concurrencies.frameworks.hystrixs.ObservableCommandHelloWorld;
 
 public class ObservableCommandHelloWorldTest {
 

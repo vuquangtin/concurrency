@@ -4,12 +4,13 @@ import java.util.concurrent.CountDownLatch;
 
 import org.apache.log4j.Logger;
 
+import rx.Observable;
+import rx.Subscription;
+
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixObservableCommand;
 
 import concurrencies.utilities.Log4jUtils;
-import rx.Observable;
-import rx.Subscription;
 
 public class HelloWorldObservableCommand extends
 		HystrixObservableCommand<String> {

@@ -1,12 +1,12 @@
 package concurrencies.frameworks.hystrixs;
 
-import rx.Observable;
-import rx.Subscription;
-import rx.observables.ConnectableObservable;
+import static java.lang.Thread.sleep;
 
 import java.util.concurrent.TimeUnit;
 
-import static java.lang.Thread.sleep;
+import rx.Observable;
+import rx.Subscription;
+import rx.observables.ConnectableObservable;
 
 public class HotNCold {
 

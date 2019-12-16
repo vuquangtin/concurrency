@@ -4,12 +4,12 @@ import java.time.ZonedDateTime;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
+import rx.Observable;
+
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixCommandMetrics.HealthCounts;
 import com.netflix.hystrix.HystrixCommandProperties;
 import com.netflix.hystrix.HystrixObservableCommand;
-
-import rx.Observable;
 
 public class HystrixExample {
 	static class IdGeneratingCommand extends HystrixObservableCommand<String> {

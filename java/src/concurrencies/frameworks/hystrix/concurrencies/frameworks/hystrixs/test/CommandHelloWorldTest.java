@@ -1,17 +1,14 @@
 package concurrencies.frameworks.hystrixs.test;
 
-import org.junit.Test;
-
-import concurrencies.frameworks.hystrixs.CommandHelloWorld;
-import rx.Observable;
-import rx.Observer;
-import rx.Subscription;
-import rx.functions.Action1;
-
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+import rx.Observable;
+import rx.Observer;
+import rx.functions.Action1;
+import concurrencies.frameworks.hystrixs.CommandHelloWorld;
 
 /**
  * Created by lisen on 2017/12/15.
