@@ -1,7 +1,7 @@
-package waitandnotify;
+package threads.waitandnotify;
 
-import waitandnotify2.Message;
-import waitandnotify2.Notifier;
+import threads.massage.Message;
+import threads.massage.Notifier;
 
 /**
  * Design Patterns

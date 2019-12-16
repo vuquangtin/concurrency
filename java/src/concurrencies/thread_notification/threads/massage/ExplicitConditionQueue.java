@@ -1,4 +1,4 @@
-package waitandnotify2;
+package threads.massage;
 
 import java.util.UUID;
 import java.util.concurrent.locks.Condition;

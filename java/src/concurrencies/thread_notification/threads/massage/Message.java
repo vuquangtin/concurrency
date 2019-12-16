@@ -1,4 +1,4 @@
-package waitandnotify2;
+package threads.massage;
 /**
  * Design Patterns
  * 

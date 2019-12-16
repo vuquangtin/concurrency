@@ -1,4 +1,4 @@
-package waitandnotify2;
+package threads.massage;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -13,24 +13,23 @@ import org.apache.log4j.Logger;
  *      href="https://github.com/vuquangtin/designpattern">https://github.com/vuquangtin/designpattern</a>
  *
  */
-public class Sender implements Runnable {
-	protected static Logger logger = Logger.getLogger(Sender.class.getName());
-	private Data data;
+public class Receiver implements Runnable {
+	private Data load;
+	protected static Logger logger = Logger.getLogger(Receiver.class.getName());
 
 	// standard constructors
 
-	public Sender(Data data) {
-		this.data = data;
+	public Receiver(Data data) {
+		this.load = data;
 	}
 
 	public void run() {
-		String packets[] = { "First packet", "Second packet", "Third packet",
-				"Fourth packet", "End" };
+		for (String receivedMessage = load.receive(); !"End"
+				.equals(receivedMessage); receivedMessage = load.receive()) {
 
-		for (String packet : packets) {
-			data.send(packet);
+			System.out.println(receivedMessage);
 
-			// Thread.sleep() to mimic heavy server-side processing
+			// ...
 			try {
 				Thread.sleep(ThreadLocalRandom.current().nextInt(1000, 5000));
 			} catch (InterruptedException e) {
