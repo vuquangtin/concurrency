@@ -20,6 +20,7 @@
 		<servlet-api.version>3.1.0</servlet-api.version>
 		<jsp-api.version>2.0</jsp-api.version>
 		<jstl.version>1.2</jstl.version>
+		<jackson.version>2.10.1</jackson.version>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/io.projectreactor/reactor-core -->
@@ -40,6 +41,30 @@
 			<scope>test</scope>
 			<version>2.2.2.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+			<version>2.2.2.RELEASE</version>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-devtools</artifactId> -->
+<!-- 			<scope>runtime</scope> -->
+<!-- 			<version>2.2.2.RELEASE</version> -->
+<!-- 		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-commons -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.cloud</groupId> -->
+<!-- 			<artifactId>spring-cloud-commons</artifactId> -->
+<!-- 			<version>2.2.0.RELEASE</version> -->
+<!-- 		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-netflix-eureka-server -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.cloud</groupId> -->
+<!-- 			<artifactId>spring-cloud-netflix-eureka-server</artifactId> -->
+<!-- 			<version>2.2.0.RELEASE</version> -->
+<!-- 		</dependency> -->
+
 		<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
 		<dependency>
 			<groupId>joda-time</groupId>
@@ -210,6 +235,108 @@
 			<groupId>io.reactivex</groupId>
 			<artifactId>rxjava-async-util</artifactId>
 			<version>0.21.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-annotations</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-hystrix -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.cloud</groupId> -->
+		<!-- <artifactId>spring-cloud-starter-hystrix</artifactId> -->
+		<!-- <version>1.4.7.RELEASE</version> -->
+		<!-- <type>pom</type> -->
+		<!-- <scope>import</scope> -->
+		<!-- </dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-hystrix-dashboard -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.cloud</groupId> -->
+		<!-- <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId> -->
+		<!-- <version>1.4.7.RELEASE</version> -->
+		<!-- <type>pom</type> -->
+		<!-- <scope>import</scope> -->
+		<!-- </dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/com.maxmind.geoip2/geoip2 -->
+		<dependency>
+			<groupId>com.maxmind.geoip2</groupId>
+			<artifactId>geoip2</artifactId>
+			<version>2.12.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-databind</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.0.7.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.12.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<version>2.2.2.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+			<version>1.3.1</version>
 		</dependency>
 	</dependencies>
 	<build>
