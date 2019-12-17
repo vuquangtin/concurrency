@@ -30,7 +30,7 @@ public class HystrixObservableCommandHelloWorld extends
 				try {
 					if (!observer.isUnsubscribed()) {
 						// a real example would do work like a network call here
-						observer.onNext("Hello");
+						//observer.onNext("Hello");
 						observer.onNext(name + "!");
 						observer.onCompleted();
 					}

@@ -1,4 +1,4 @@
-package running.threads.in.scheduling2;
+package running.threads.in.scheduling.submits;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;

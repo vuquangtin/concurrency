@@ -1,4 +1,4 @@
-package running.threads.in.scheduling2;
+package running.threads.in.scheduling.submits;
 
 public class Task1 {
 
