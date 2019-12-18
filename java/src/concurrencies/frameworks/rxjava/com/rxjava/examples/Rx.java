@@ -18,9 +18,13 @@ import rx.functions.Action1;
  * java -jar target/rxjava...jar One Two Three
  * <p>
  * See some good reading at
- * https://github.com/ReactiveX/RxJava/wiki/Additional-Reading
+ *
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * 
- * @author <a href="mailto://dan@danbecker.info>Dan Becker</a>
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class Rx {
 

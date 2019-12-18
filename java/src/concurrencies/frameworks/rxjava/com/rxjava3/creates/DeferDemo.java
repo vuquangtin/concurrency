@@ -5,9 +5,13 @@ import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.functions.Consumer;
 
 /**
- * @author ousiyuan
- * @date 2019/9/30
- * defer 等待观察者订阅这个observable是，会调用自己返回的一个Observable
+ * java concurrency
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class DeferDemo {
     public static int num = 4;

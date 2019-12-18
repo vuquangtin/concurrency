@@ -1,5 +1,12 @@
 package com.rxjava.tutorials;
 
+import io.reactivex.rxjava3.core.Observable;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
 /**
  * java concurrency
  * 
@@ -9,13 +16,6 @@ package com.rxjava.tutorials;
  *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
  *
  */
-import io.reactivex.rxjava3.core.Observable;
-
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 public class TickTack {
 	private static long start = System.currentTimeMillis();
 

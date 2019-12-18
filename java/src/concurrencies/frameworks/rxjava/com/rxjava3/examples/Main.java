@@ -11,7 +11,15 @@ import java.util.List;
 import java.util.concurrent.Callable;
 
 import org.reactivestreams.Publisher;
-
+/**
+ * java concurrency
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
+ */
 public class Main {
     public static void main(String[] args) {
 

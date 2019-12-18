@@ -4,8 +4,13 @@ import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.functions.Consumer;
 
 /**
- * @author ousiyuan
- * @date 2019/10/9
+ * java concurrency
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class ElementAtDemo {
     public static void main(String[] args) {

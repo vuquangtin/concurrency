@@ -3,9 +3,13 @@ package com.rxjava3.examples;
 import java.util.concurrent.Executor;
 
 /**
- * @Description
- * @Date 2019/11/20 15:44
- * @Author mxz
+ * java concurrency
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class Scheduler {
     // 创建线程池

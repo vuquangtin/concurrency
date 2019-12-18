@@ -8,9 +8,13 @@ import io.reactivex.rxjava3.functions.Consumer;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author ousiyuan
- * @date 2019/10/9
- * 发射一个数据后，随后线程睡眠超过设置的时间，数据才会真正发射出去，要不会被过滤
+ * java concurrency
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class DebounceDemo {
     public static void main(String[] args) {

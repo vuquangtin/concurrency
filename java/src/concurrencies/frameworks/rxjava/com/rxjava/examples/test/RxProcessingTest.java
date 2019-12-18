@@ -27,7 +27,12 @@ import com.rxjava.examples.RxProcessing;
 import com.rxjava.examples.TaskUtility;
 
 /**
- * Created by achaub001c on 7/12/2016.
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * 
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class RxProcessingTest {
 	private static ExecutorService service;

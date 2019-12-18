@@ -11,7 +11,12 @@ import java.util.Iterator;
  * Provides and Iterable interface to a text file. Makes text files amenable to
  * Reactive/Stream APIs.
  * 
- * @author dabecker
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * 
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class BufferedReaderIterator implements Iterable<String> {
 

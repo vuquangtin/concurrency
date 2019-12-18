@@ -7,7 +7,12 @@ import java.util.concurrent.CountDownLatch;
 import rx.Subscriber;
 
 /**
- * Created by achaub001c on 7/12/2016.
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * 
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class QuoteSubscriberWithLatch extends Subscriber<QuoteResource> {
 	private List<QuoteResource> results;

@@ -8,9 +8,13 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 import io.reactivex.rxjava3.schedulers.Timed;
 
 /**
- * @author ousiyuan
- * @date 2019/11/5
- * 得到发射数据的时间长度，第一个位订阅到发射的时间长度
+ * java concurrency
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class TimeIntervalDemo {
     public static void main(String[] args) {

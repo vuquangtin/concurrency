@@ -49,6 +49,14 @@ import rx.subjects.ReplaySubject;
 import rx.subjects.Subject;
 import rx.subscriptions.BooleanSubscription;
 
+/***
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * 
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
+ */
 public class ObservableTests {
 
 	@Mock
@@ -1184,15 +1192,16 @@ public class ObservableTests {
 	public void testExtend() {
 		final TestSubscriber<Object> subscriber = new TestSubscriber<Object>();
 		final Object value = new Object();
-//		Observable.just(value).extend(new Func1<OnSubscribe<Object>, Object>() {
-//			@Override
-//			public Object call(OnSubscribe<Object> onSubscribe) {
-//				onSubscribe.call(subscriber);
-//				subscriber.assertNoErrors();
-//				subscriber.assertCompleted();
-//				subscriber.assertValue(value);
-//				return subscriber.getOnNextEvents().get(0);
-//			}
-//		});
+		// Observable.just(value).extend(new Func1<OnSubscribe<Object>,
+		// Object>() {
+		// @Override
+		// public Object call(OnSubscribe<Object> onSubscribe) {
+		// onSubscribe.call(subscriber);
+		// subscriber.assertNoErrors();
+		// subscriber.assertCompleted();
+		// subscriber.assertValue(value);
+		// return subscriber.getOnNextEvents().get(0);
+		// }
+		// });
 	}
 }

@@ -3,9 +3,13 @@ package com.rxjava3.conditions;
 import io.reactivex.rxjava3.core.Observable;
 
 /**
- * @author ousiyuan
- * @date 2019/11/6
- * // 发射的数据中是否包含contains里面的数据
+ * java concurrency
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class ContainsDemo {
     public static void main(String[] args) {

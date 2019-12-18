@@ -1,5 +1,9 @@
 package com.rxjava.tutorials;
 
+import io.reactivex.rxjava3.core.Observable;
+
+import java.util.Arrays;
+
 /**
  * java concurrency
  * 
@@ -9,11 +13,6 @@ package com.rxjava.tutorials;
  *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
  *
  */
-
-import io.reactivex.rxjava3.core.Observable;
-
-import java.util.Arrays;
-
 public class ReactivexSamples {
 	private static final String[] STRINGS = { "the", "quick", "brown", "fox",
 			"jumped", "over", "the", "lazy", "dog" };

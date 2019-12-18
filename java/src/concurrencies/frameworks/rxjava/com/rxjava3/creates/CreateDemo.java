@@ -8,9 +8,15 @@ import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.functions.Consumer;
 
 /**
- * @author ousiyuan
- * @date 2019/9/30
+ * java concurrency
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
+
 public class CreateDemo {
     public static void main(String[] args) {
         Observable.create(new ObservableOnSubscribe<String>() {

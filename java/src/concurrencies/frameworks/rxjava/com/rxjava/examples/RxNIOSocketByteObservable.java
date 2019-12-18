@@ -14,7 +14,12 @@ import rx.Observable;
 import rx.Subscriber;
 
 /**
- * Created by mbk on 5/24/16.
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * 
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class RxNIOSocketByteObservable {
 

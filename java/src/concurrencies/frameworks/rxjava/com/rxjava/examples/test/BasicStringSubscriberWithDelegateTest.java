@@ -9,6 +9,14 @@ import com.rxjava.examples.IResult;
 
 import concurrencies.utilities.Log4jUtils;
 
+/***
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * 
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
+ */
 public class BasicStringSubscriberWithDelegateTest {
 	static Logger logger = Logger
 			.getLogger(BasicStringSubscriberWithDelegateTest.class.getName());

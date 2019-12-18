@@ -5,8 +5,14 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * Created by achaub001c on 7/12/2016. a utility class to make http requests to
- * a url and retrieve results
+ * a utility class to make http requests to a url and retrieve results
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * 
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class RestUtility {
 	public static final long SAFE_DELAY = 2000;

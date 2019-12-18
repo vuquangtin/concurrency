@@ -10,8 +10,14 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * Created by achaub001c on 7/12/2016. utility class to create simple callables
- * returning futures
+ * utility class to create simple callables returning futures
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * 
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class TaskUtility {
 

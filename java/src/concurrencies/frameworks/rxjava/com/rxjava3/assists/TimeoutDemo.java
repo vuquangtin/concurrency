@@ -7,8 +7,13 @@ import io.reactivex.rxjava3.core.ObservableOnSubscribe;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author ousiyuan
- * @date 2019/11/5
+ * java concurrency
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
+ *
  */
 public class TimeoutDemo {
     public static void main(String[] args) {

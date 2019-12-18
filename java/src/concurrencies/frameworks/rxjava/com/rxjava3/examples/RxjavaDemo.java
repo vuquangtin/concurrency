@@ -5,12 +5,13 @@ import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.functions.Consumer;
 
 /**
- * <pre>
- * 描述
- * </pre>
+ * java concurrency
+ * 
+ * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
+ * @version 1.0.0
+ * @see <a
+ *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
  *
- * @author hui2.chen
- * @date 2019/8/29
  */
 public class RxjavaDemo {
 
