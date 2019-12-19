@@ -20,7 +20,7 @@ Outline
 
 ## just
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../../resources/images/enable.png'/> Single, <img src='../../../../../../resources/images/disable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../resources/images/enable.png'/> Single, <img src='../../../../../resources/images/disable.png'/> Completable
 
 ReactiveX documentation: http://reactivex.io/documentation/operators/just.html
 
@@ -80,7 +80,7 @@ ReactiveX documentation: http://reactivex.io/documentation/operators/from.html
 
 
 ### fromIterable
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/disable.png'/> Maybe, <img src='../../../../../../resources/images/disable.png'/> Single, <img src='../../../../../../resources/images/disable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/disable.png'/> Maybe, <img src='../../../../../resources/images/disable.png'/> Single, <img src='../../../../../resources/images/disable.png'/> Completable
 
 Signals the items from a java.lang.Iterable source (such as Lists, Sets or Collections or custom Iterables) and then completes the sequence.
 
@@ -123,7 +123,7 @@ public class FromIterableExample {
 ```
 
 ### fromArray
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/disable.png'/> Maybe, <img src='../../../../../../resources/images/disable.png'/> Single, <img src='../../../../../../resources/images/disable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/disable.png'/> Maybe, <img src='../../../../../resources/images/disable.png'/> Single, <img src='../../../../../resources/images/disable.png'/> Completable
 
 Signals the elements of the given array and then completes the sequence.
 
@@ -168,7 +168,7 @@ Note: RxJava does not support primitive arrays, only (generic) reference arrays.
 
 ### fromCallable
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../../resources/images/enable.png'/> Single, <img src='../../../../../../resources/images/enable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../resources/images/enable.png'/> Single, <img src='../../../../../resources/images/enable.png'/> Completable
 
 When a consumer subscribes, the given java.util.concurrent.Callable is invoked and its returned value (or thrown exception) is relayed to that consumer.
 fromCallable example:
@@ -211,7 +211,7 @@ public class FromCallableExample {
 
 ### fromAction
 
-Available in: <img src='../../../../../../resources/images/disable.png'/> Flowable, <img src='../../../../../../resources/images/disable.png'/> Observable, <img src='../../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../../resources/images/disable.png'/> Single, <img src='../../../../../../resources/images/enable.png'/> Completable
+Available in: <img src='../../../../../resources/images/disable.png'/> Flowable, <img src='../../../../../resources/images/disable.png'/> Observable, <img src='../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../resources/images/disable.png'/> Single, <img src='../../../../../resources/images/enable.png'/> Completable
 
 When a consumer subscribes, the given io.reactivex.function.Action is invoked and the consumer completes or receives the exception the Action threw.
 fromAction example:
@@ -251,7 +251,7 @@ public class FromActionExample {
 
 ### fromRunnable
 
-Available in: <img src='../../../../../../resources/images/disable.png'/> Flowable, <img src='../../../../../../resources/images/disable.png'/> Observable, <img src='../../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../../resources/images/disable.png'/> Single, <img src='../../../../../../resources/images/enable.png'/> Completable
+Available in: <img src='../../../../../resources/images/disable.png'/> Flowable, <img src='../../../../../resources/images/disable.png'/> Observable, <img src='../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../resources/images/disable.png'/> Single, <img src='../../../../../resources/images/enable.png'/> Completable
 
 When a consumer subscribes, the given io.reactivex.function.Action is invoked and the consumer completes or receives the exception the Action threw.
 fromRunnable example:
@@ -290,7 +290,7 @@ public class FromRunnableExample {
 
 ### fromFuture
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../../resources/images/enable.png'/> Single, <img src='../../../../../../resources/images/enable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../resources/images/enable.png'/> Single, <img src='../../../../../resources/images/enable.png'/> Completable
 
 Given a pre-existing, already running or already completed java.util.concurrent.Future, wait for the Future to complete normally or with an exception in a blocking fashion and relay the produced value or exception to the consumers.
 fromFuture example:
@@ -350,11 +350,11 @@ The following combinations are available in the various reactive types with the 
 
 |targetType \ sourceType |	Publisher |	Observable |	Maybe |	Single |	Completable|
 |----|----|----|----|---|---|
-|Flowable| 	<img src='../../../../../../resources/images/enable.png'/>  	||||			
-|Observable |	<img src='../../../../../../resources/images/enable.png'/> ||||
-|Maybe 		||||		<img src='../../../../../../resources/images/enable.png'/>  |	<img src='../../../../../../resources/images/enable.png'/> |
-|Single| 	<img src='../../../../../../resources/images/enable.png'/>  	|<img src='../../../../../../resources/images/enable.png'/>  	|	||	
-|Completable |	<img src='../../../../../../resources/images/enable.png'/> |<img src='../../../../../../resources/images/enable.png'/> |<img src='../../../../../../resources/images/enable.png'/> |<img src='../../../../../../resources/images/enable.png'/> |
+|Flowable| 	<img src='../../../../../resources/images/enable.png'/>  	||||			
+|Observable |	<img src='../../../../../resources/images/enable.png'/> ||||
+|Maybe 		||||		<img src='../../../../../resources/images/enable.png'/>  |	<img src='../../../../../resources/images/enable.png'/> |
+|Single| 	<img src='../../../../../resources/images/enable.png'/>  	|<img src='../../../../../resources/images/enable.png'/>  	|	||	
+|Completable |	<img src='../../../../../resources/images/enable.png'/> |<img src='../../../../../resources/images/enable.png'/> |<img src='../../../../../resources/images/enable.png'/> |<img src='../../../../../resources/images/enable.png'/> |
 
 >Note: not all possible conversion is implemented via the from{reactive type} method families. Check out the to{reactive type} method families for further conversion possibilities.
 
@@ -373,7 +373,7 @@ observable.subscribe(
 
 ## generate
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/disable.png'/> Maybe, <img src='../../../../../../resources/images/disable.png'/> Single, <img src='../../../../../../resources/images/disable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/disable.png'/> Maybe, <img src='../../../../../resources/images/disable.png'/> Single, <img src='../../../../../resources/images/disable.png'/> Completable
 
 ReactiveX documentation: http://reactivex.io/documentation/operators/create.html
 
@@ -414,7 +414,7 @@ public class GenerateExample {
 ```
 ## create
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../../resources/images/enable.png'/> Single, <img src='../../../../../../resources/images/enable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../resources/images/enable.png'/> Single, <img src='../../../../../resources/images/enable.png'/> Completable
 
 ReactiveX documentation: http://reactivex.io/documentation/operators/create.html
 
@@ -486,7 +486,7 @@ public class CreateExample {
 
 ## defer
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../../resources/images/enable.png'/> Single, <img src='../../../../../../resources/images/enable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../resources/images/enable.png'/> Single, <img src='../../../../../resources/images/enable.png'/> Completable
 
 ReactiveX documentation: http://reactivex.io/documentation/operators/defer.html
 
@@ -548,7 +548,7 @@ public class DeferExample {
 
 ## range
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/disable.png'/> Maybe, <img src='../../../../../../resources/images/disable.png'/> Single, <img src='../../../../../../resources/images/disable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/disable.png'/> Maybe, <img src='../../../../../resources/images/disable.png'/> Single, <img src='../../../../../resources/images/disable.png'/> Completable
 
 ReactiveX documentation: http://reactivex.io/documentation/operators/range.html
 
@@ -590,7 +590,7 @@ public class RangeExample {
 
 ## interval
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/disable.png'/> Maybe, <img src='../../../../../../resources/images/disable.png'/> Single, <img src='../../../../../../resources/images/disable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/disable.png'/> Maybe, <img src='../../../../../resources/images/disable.png'/> Single, <img src='../../../../../resources/images/disable.png'/> Completable
 
 ReactiveX documentation: http://reactivex.io/documentation/operators/interval.html
 
@@ -633,7 +633,7 @@ public class IntervalExample {
 
 ## timer
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../../resources/images/enable.png'/> Single, <img src='../../../../../../resources/images/enable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../resources/images/enable.png'/> Single, <img src='../../../../../resources/images/enable.png'/> Completable
 
 ReactiveX documentation: http://reactivex.io/documentation/operators/timer.html
 
@@ -671,7 +671,7 @@ public class TimerExample {
 
 ## empty
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../../resources/images/disable.png'/> Single, <img src='../../../../../../resources/images/enable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../resources/images/disable.png'/> Single, <img src='../../../../../resources/images/enable.png'/> Completable
 
 ReactiveX documentation: http://reactivex.io/documentation/operators/empty-never-throw.html
 
@@ -710,7 +710,7 @@ public class EmptyExample {
 
 ## never
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../../resources/images/enable.png'/> Single, <img src='../../../../../../resources/images/enable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../resources/images/enable.png'/> Single, <img src='../../../../../resources/images/enable.png'/> Completable
 
 ReactiveX documentation: http://reactivex.io/documentation/operators/empty-never-throw.html
 
@@ -751,7 +751,7 @@ public class NeverExample {
 
 ## error
 
-Available in: <img src='../../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../../resources/images/enable.png'/> Single, <img src='../../../../../../resources/images/enable.png'/> Completable
+Available in: <img src='../../../../../resources/images/enable.png'/> Flowable, <img src='../../../../../resources/images/enable.png'/> Observable, <img src='../../../../../resources/images/enable.png'/> Maybe, <img src='../../../../../resources/images/enable.png'/> Single, <img src='../../../../../resources/images/enable.png'/> Completable
 
 ReactiveX documentation: http://reactivex.io/documentation/operators/empty-never-throw.html
 
