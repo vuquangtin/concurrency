@@ -1,8 +1,5 @@
 package com.rxjava3.schedulers.threads;
 
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.schedulers.Schedulers;
-
 import org.junit.Test;
 
 /**

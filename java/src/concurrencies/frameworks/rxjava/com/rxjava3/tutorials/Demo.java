@@ -1,5 +1,7 @@
 package com.rxjava3.tutorials;
 
+import java.util.concurrent.CountDownLatch;
+
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.ObservableEmitter;
 import io.reactivex.rxjava3.core.ObservableOnSubscribe;
@@ -11,8 +13,6 @@ import io.reactivex.rxjava3.functions.Action;
 import io.reactivex.rxjava3.functions.Consumer;
 import io.reactivex.rxjava3.functions.Function;
 import io.reactivex.rxjava3.schedulers.Schedulers;
-
-import java.util.concurrent.CountDownLatch;
 
 /**
  * java concurrency

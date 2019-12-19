@@ -1,8 +1,8 @@
 package com.rxjava3.reactivex;
 
-import io.reactivex.rxjava3.core.Observable;
-
 import java.util.concurrent.TimeUnit;
+
+import io.reactivex.rxjava3.core.Observable;
 
 /**
  * Periodically generates an infinite, ever increasing numbers (of type Long).

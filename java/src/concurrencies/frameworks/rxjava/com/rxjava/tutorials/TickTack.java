@@ -1,11 +1,11 @@
 package com.rxjava.tutorials;
 
-import io.reactivex.rxjava3.core.Observable;
-
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
+
+import io.reactivex.rxjava3.core.Observable;
 
 /**
  * java concurrency

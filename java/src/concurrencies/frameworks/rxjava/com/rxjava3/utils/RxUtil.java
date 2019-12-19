@@ -1,5 +1,9 @@
 package com.rxjava3.utils;
 
+import java.util.concurrent.TimeUnit;
+
+import org.reactivestreams.Publisher;
+
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.FlowableTransformer;
@@ -12,10 +16,6 @@ import io.reactivex.rxjava3.functions.Action;
 import io.reactivex.rxjava3.functions.Consumer;
 import io.reactivex.rxjava3.internal.functions.Functions;
 import io.reactivex.rxjava3.schedulers.Schedulers;
-
-import java.util.concurrent.TimeUnit;
-
-import org.reactivestreams.Publisher;
 
 /**
  * java concurrency

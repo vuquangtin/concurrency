@@ -1,10 +1,10 @@
 package com.rxjava3.changes;
 
-import io.reactivex.rxjava3.core.Observable;
-import io.reactivex.rxjava3.functions.Consumer;
-
 import com.rxjava3.change.entities.Person;
 import com.rxjava3.change.entities.Student;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.Consumer;
 
 /**
  * java concurrency

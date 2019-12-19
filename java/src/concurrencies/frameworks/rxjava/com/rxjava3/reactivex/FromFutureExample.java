@@ -1,11 +1,11 @@
 package com.rxjava3.reactivex;
 
-import io.reactivex.rxjava3.core.Observable;
-
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+
+import io.reactivex.rxjava3.core.Observable;
 
 /**
  * Given a pre-existing, already running or already completed

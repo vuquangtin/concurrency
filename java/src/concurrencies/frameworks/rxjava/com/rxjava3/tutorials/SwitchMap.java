@@ -1,8 +1,8 @@
 package com.rxjava3.tutorials;
 
-import io.reactivex.rxjava3.core.Observable;
-
 import java.util.concurrent.TimeUnit;
+
+import io.reactivex.rxjava3.core.Observable;
 
 /**
  * switchMap() is similar to the flatMap(). The difference is switchMap()

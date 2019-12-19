@@ -1,12 +1,11 @@
 package com.rxjava3.schedulers.threads;
 
-import io.reactivex.rxjava3.core.Single;
-import io.reactivex.rxjava3.schedulers.Schedulers;
-import lombok.extern.slf4j.Slf4j;
-
 import org.apache.log4j.Logger;
 
 import concurrencies.utilities.Log4jUtils;
+import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.schedulers.Schedulers;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * java concurrency

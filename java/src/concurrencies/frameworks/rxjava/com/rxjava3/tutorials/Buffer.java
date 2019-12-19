@@ -1,11 +1,12 @@
 package com.rxjava3.tutorials;
 
 import static com.rxjava3.tutorials.Sleeper.sleep;
+
+import java.util.concurrent.TimeUnit;
+
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.ObservableSource;
 import io.reactivex.rxjava3.functions.Function;
-
-import java.util.concurrent.TimeUnit;
 public class Buffer {
 	public static void main(String[] args) {
 		openAndClosingSelector();

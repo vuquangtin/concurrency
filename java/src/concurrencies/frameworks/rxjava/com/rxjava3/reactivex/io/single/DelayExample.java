@@ -1,9 +1,9 @@
 package com.rxjava3.reactivex.io.single;
 
-import io.reactivex.rxjava3.core.Observable;
-
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+
+import io.reactivex.rxjava3.core.Observable;
 
 /**
  * With the help of the delay() operator emissions can be shifted forward in

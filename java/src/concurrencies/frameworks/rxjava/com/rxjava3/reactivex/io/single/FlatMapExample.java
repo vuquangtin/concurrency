@@ -1,13 +1,13 @@
 package com.rxjava3.reactivex.io.single;
 
-import io.reactivex.rxjava3.core.Observable;
-import io.reactivex.rxjava3.schedulers.Schedulers;
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import com.google.common.collect.Lists;
 import com.rxjava3.utils.Utils;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 /**
  * Lets start with a simple Java unit test that is testing flatMap operator.

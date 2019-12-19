@@ -1,8 +1,8 @@
 package com.rxjava3.reactivex;
 
-import io.reactivex.rxjava3.core.Observable;
-
 import java.util.concurrent.TimeUnit;
+
+import io.reactivex.rxjava3.core.Observable;
 
 /**
  * After the specified time, this reactive source signals a single 0L (then

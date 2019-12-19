@@ -1,11 +1,5 @@
 package com.rxjava3.reactivex;
 
-import java.util.concurrent.CompletableFuture;
-
-import reactor.core.publisher.Flux;
-import io.reactivex.rxjava3.core.Completable;
-import io.reactivex.rxjava3.core.Observable;
-
 /**
  * Wraps or converts another reactive type to the target reactive type.
  * 

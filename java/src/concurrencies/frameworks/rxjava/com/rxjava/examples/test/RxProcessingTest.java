@@ -14,9 +14,6 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import rx.Observable;
-import rx.observers.TestSubscriber;
-
 import com.rxjava.examples.BasicStringSubscriberWithLatch;
 import com.rxjava.examples.GenericUtil;
 import com.rxjava.examples.ObservableUtil;
@@ -25,6 +22,9 @@ import com.rxjava.examples.QuoteSubscriberWithLatch;
 import com.rxjava.examples.RestUtility;
 import com.rxjava.examples.RxProcessing;
 import com.rxjava.examples.TaskUtility;
+
+import rx.Observable;
+import rx.observers.TestSubscriber;
 
 /**
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333

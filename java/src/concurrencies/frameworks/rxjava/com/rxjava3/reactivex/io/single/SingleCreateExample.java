@@ -1,14 +1,14 @@
 package com.rxjava3.reactivex.io.single;
 
-import io.reactivex.rxjava3.core.Observable;
-import io.reactivex.rxjava3.core.ObservableOnSubscribe;
-
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import com.rxjava3.utils.Utils;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.ObservableOnSubscribe;
 
 /**
  * java concurrency

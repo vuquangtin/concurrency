@@ -1,10 +1,10 @@
 package com.rxjava3.tutorials;
 
+import java.util.concurrent.TimeUnit;
+
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.disposables.Disposable;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * The first variant of delay accepts parameters that define a duration of time

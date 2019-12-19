@@ -1,9 +1,9 @@
 package com.learnrxjava;
 
-import rx.Observable;
-
 import com.learnrxjava.types.JSON;
 import com.learnrxjava.types.Movies;
+
+import rx.Observable;
 
 public class ObservableExercises {
 

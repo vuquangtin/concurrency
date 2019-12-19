@@ -1,9 +1,9 @@
 package com.rxjava.examples.test;
 
+import com.rxjava.examples.RxNIOSocketByteObservable;
+
 import rx.Observable;
 import rx.schedulers.Schedulers;
-
-import com.rxjava.examples.RxNIOSocketByteObservable;
 
 /**
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333

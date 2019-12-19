@@ -1,9 +1,9 @@
 package com.rxjava3.tutorials;
 
+import java.util.concurrent.TimeUnit;
+
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.functions.BiFunction;
-
-import java.util.concurrent.TimeUnit;
 
 public class CombineLatest {
 

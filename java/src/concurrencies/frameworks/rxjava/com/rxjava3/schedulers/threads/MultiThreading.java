@@ -1,14 +1,15 @@
 package com.rxjava3.schedulers.threads;
 
+import java.util.concurrent.Callable;
+
 import org.junit.Test;
+
 import rx.Observable;
 import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.observers.Observers;
 import rx.observers.TestSubscriber;
 import rx.schedulers.Schedulers;
-
-import java.util.concurrent.Callable;
 
 /**
  * java concurrency

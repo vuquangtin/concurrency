@@ -1,15 +1,15 @@
 package com.rxjava3.tutorials;
 
-import io.reactivex.rxjava3.core.Observable;
-import io.reactivex.rxjava3.functions.Consumer;
-import io.reactivex.rxjava3.functions.Function;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import com.rxjava3.change.entities.Course;
 import com.rxjava3.change.entities.Student;
 import com.rxjava3.utils.Utils;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.functions.Function;
 
 /**
  * java concurrency

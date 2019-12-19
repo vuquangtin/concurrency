@@ -1,10 +1,10 @@
 package com.rxjava3.merges;
 
-import io.reactivex.rxjava3.core.Observable;
-import io.reactivex.rxjava3.functions.BiFunction;
-
 import java.util.Arrays;
 import java.util.List;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.BiFunction;
 
 /**
  * java concurrency

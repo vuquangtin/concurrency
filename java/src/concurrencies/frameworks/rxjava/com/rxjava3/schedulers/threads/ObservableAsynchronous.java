@@ -1,15 +1,16 @@
 package com.rxjava3.schedulers.threads;
 
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
+
 import org.junit.Test;
+
 import rx.Observable;
 import rx.Observer;
 import rx.Subscription;
 import rx.functions.Action1;
 import rx.observers.TestSubscriber;
 import rx.schedulers.Schedulers;
-
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Using the option subscribeOn or observerOn, you specify in your observable
