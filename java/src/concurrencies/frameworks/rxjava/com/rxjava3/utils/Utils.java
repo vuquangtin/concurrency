@@ -15,6 +15,17 @@ public class Utils {
 	public static void println(String s) {
 		System.out.println(s);
 	}
+
+	public static void sleep(long millis) {
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	public static void sleep10000() {
+		sleep(10000);
+	}
 }
 
 class Course {
