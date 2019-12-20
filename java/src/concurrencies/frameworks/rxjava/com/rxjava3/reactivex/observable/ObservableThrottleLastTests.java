@@ -11,7 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.observable;
+package com.rxjava3.reactivex.observable;
 
 import static org.mockito.Mockito.inOrder;
 
@@ -21,6 +21,10 @@ import org.junit.Test;
 import org.mockito.InOrder;
 
 import com.rxjava3.reactivex.testsupport.TestHelper;
+
+import io.reactivex.rxjava3.core.Observer;
+import io.reactivex.rxjava3.schedulers.TestScheduler;
+import io.reactivex.rxjava3.subjects.PublishSubject;
 
 public class ObservableThrottleLastTests {
 

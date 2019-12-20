@@ -11,7 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.schedulers;
+package com.rxjava3.reactivex.schedulers;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -20,6 +20,8 @@ import static org.junit.Assert.assertSame;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
+
+import io.reactivex.rxjava3.schedulers.Timed;
 
 public class TimedTest {
 

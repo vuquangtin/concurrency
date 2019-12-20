@@ -11,11 +11,13 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.flowable;
+package com.rxjava3.reactivex.flowable;
 
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import io.reactivex.rxjava3.core.Notification;
 
 public class FlowableNotificationTest {
 

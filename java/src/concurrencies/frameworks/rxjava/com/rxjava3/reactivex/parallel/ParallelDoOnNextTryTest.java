@@ -11,11 +11,9 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.parallel;
+package com.rxjava3.reactivex.parallel;
 
 import static org.junit.Assert.assertEquals;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.parallel.ParallelFailureHandling;
 
 import java.util.List;
 
@@ -24,6 +22,14 @@ import org.junit.Test;
 import com.rxjava3.reactivex.exceptions.TestException;
 import com.rxjava3.reactivex.testsupport.TestHelper;
 import com.rxjava3.reactivex.testsupport.TestSubscriberEx;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.exceptions.CompositeException;
+import io.reactivex.rxjava3.functions.BiFunction;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.internal.functions.Functions;
+import io.reactivex.rxjava3.parallel.ParallelFailureHandling;
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
 
 public class ParallelDoOnNextTryTest implements Consumer<Object> {
 

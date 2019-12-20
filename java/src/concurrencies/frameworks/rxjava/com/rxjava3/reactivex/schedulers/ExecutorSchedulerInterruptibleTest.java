@@ -11,16 +11,13 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.schedulers;
+package com.rxjava3.reactivex.schedulers;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import io.reactivex.rxjava3.internal.disposables.EmptyDisposable;
-import io.reactivex.rxjava3.internal.schedulers.SchedulerPoolFactory;
-import io.reactivex.rxjava3.schedulers.SchedulerRunnableIntrospection;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryMXBean;
@@ -41,6 +38,17 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import com.rxjava3.reactivex.testsupport.TestHelper;
+
+import io.reactivex.rxjava3.core.Scheduler;
+import io.reactivex.rxjava3.core.Scheduler.Worker;
+import io.reactivex.rxjava3.disposables.Disposable;
+import io.reactivex.rxjava3.internal.disposables.EmptyDisposable;
+import io.reactivex.rxjava3.internal.functions.Functions;
+import io.reactivex.rxjava3.internal.schedulers.RxThreadFactory;
+import io.reactivex.rxjava3.internal.schedulers.SchedulerPoolFactory;
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
+import io.reactivex.rxjava3.schedulers.SchedulerRunnableIntrospection;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class ExecutorSchedulerInterruptibleTest extends AbstractSchedulerConcurrencyTests {
 

@@ -11,16 +11,10 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.parallel;
+package com.rxjava3.reactivex.parallel;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.internal.util.ListAddBiConsumer;
-import io.reactivex.rxjava3.internal.util.MergerBiFunction;
-import io.reactivex.rxjava3.parallel.ParallelFlowable;
-import io.reactivex.rxjava3.parallel.ParallelFlowableConverter;
-import io.reactivex.rxjava3.parallel.ParallelTransformer;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -40,6 +34,28 @@ import org.reactivestreams.Subscription;
 import com.rxjava3.reactivex.exceptions.TestException;
 import com.rxjava3.reactivex.testsupport.TestHelper;
 import com.rxjava3.reactivex.testsupport.TestSubscriberEx;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Scheduler;
+import io.reactivex.rxjava3.exceptions.CompositeException;
+import io.reactivex.rxjava3.functions.Action;
+import io.reactivex.rxjava3.functions.BiConsumer;
+import io.reactivex.rxjava3.functions.BiFunction;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.functions.Function;
+import io.reactivex.rxjava3.functions.LongConsumer;
+import io.reactivex.rxjava3.functions.Predicate;
+import io.reactivex.rxjava3.functions.Supplier;
+import io.reactivex.rxjava3.internal.functions.Functions;
+import io.reactivex.rxjava3.internal.util.ListAddBiConsumer;
+import io.reactivex.rxjava3.internal.util.MergerBiFunction;
+import io.reactivex.rxjava3.parallel.ParallelFlowable;
+import io.reactivex.rxjava3.parallel.ParallelFlowableConverter;
+import io.reactivex.rxjava3.parallel.ParallelTransformer;
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
+import io.reactivex.rxjava3.processors.UnicastProcessor;
+import io.reactivex.rxjava3.schedulers.Schedulers;
+import io.reactivex.rxjava3.subscribers.TestSubscriber;
 
 public class ParallelFlowableTest {
 

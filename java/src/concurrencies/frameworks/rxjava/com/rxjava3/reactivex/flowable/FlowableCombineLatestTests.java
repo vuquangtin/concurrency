@@ -13,11 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.reactivex.flowable;
+package com.rxjava3.reactivex.flowable;
 
 import static org.junit.Assert.assertNull;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.processors.BehaviorProcessor;
 
 import org.junit.Ignore;
 import org.junit.Test;
@@ -25,6 +23,15 @@ import org.junit.Test;
 import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.CoolRating;
 import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.ExtendedResult;
 import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.HorrorMovie;
+import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.Media;
+import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.Movie;
+import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.Rating;
+import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.Result;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.functions.BiFunction;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.processors.BehaviorProcessor;
 
 public class FlowableCombineLatestTests {
     /**
@@ -71,18 +78,18 @@ public class FlowableCombineLatestTests {
         // FIXME this is no longer allowed
         Flowable<Boolean> nullObservable = BehaviorProcessor.createDefault((Boolean) null);
         Flowable<Boolean> nonNullObservable = BehaviorProcessor.createDefault(true);
-        Flowable<Boolean> combined =
-                combineLatest(nullObservable, nonNullObservable, new BiFunction<Boolean, Boolean, Boolean>() {
-                    @Override
-                    public Boolean apply(Boolean bool1, Boolean bool2) {
-                        return bool1 == null ? null : bool2;
-                    }
-                });
-        combined.subscribe(new Consumer<Boolean>() {
-            @Override
-            public void accept(Boolean aBoolean) {
-                assertNull(aBoolean);
-            }
-        });
+//        Flowable<Boolean> combined =
+//                combineLatest(nullObservable, nonNullObservable, new BiFunction<Boolean, Boolean, Boolean>() {
+//                    @Override
+//                    public Boolean apply(Boolean bool1, Boolean bool2) {
+//                        return bool1 == null ? null : bool2;
+//                    }
+//                });
+//        combined.subscribe(new Consumer<Boolean>() {
+//            @Override
+//            public void accept(Boolean aBoolean) {
+//                assertNull(aBoolean);
+//            }
+//        });
     }
 }

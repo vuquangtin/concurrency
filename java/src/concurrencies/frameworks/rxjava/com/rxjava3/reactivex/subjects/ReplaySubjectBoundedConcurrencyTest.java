@@ -11,18 +11,14 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.subjects;
+package com.rxjava3.reactivex.subjects;
 
 import static org.junit.Assert.assertEquals;
-import io.reactivex.rxjava3.core.ObservableSource;
-import io.reactivex.rxjava3.observers.DefaultObserver;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
@@ -33,6 +29,16 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.rxjava3.reactivex.testsupport.TestObserverEx;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.ObservableSource;
+import io.reactivex.rxjava3.core.Observer;
+import io.reactivex.rxjava3.core.Scheduler;
+import io.reactivex.rxjava3.disposables.Disposables;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.observers.DefaultObserver;
+import io.reactivex.rxjava3.schedulers.Schedulers;
+import io.reactivex.rxjava3.subjects.ReplaySubject;
 
 public class ReplaySubjectBoundedConcurrencyTest {
 

@@ -11,7 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.exceptions;
+package com.rxjava3.reactivex.exceptions;
 
 /**
  * Exception for testing if unchecked expections propagate as-is without confusing with

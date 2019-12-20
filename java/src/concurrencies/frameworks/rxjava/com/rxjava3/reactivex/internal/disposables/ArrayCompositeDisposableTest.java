@@ -11,15 +11,16 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.internal.disposables;
+package com.rxjava3.reactivex.internal.disposables;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import io.reactivex.rxjava3.internal.disposables.ArrayCompositeDisposable;
 
 import org.junit.Test;
 
-import com.rxjava3.reactivex.testsupport.TestHelper;
+import io.reactivex.rxjava3.disposables.Disposable;
+import io.reactivex.rxjava3.disposables.Disposables;
+import io.reactivex.rxjava3.internal.disposables.ArrayCompositeDisposable;
 
 public class ArrayCompositeDisposableTest {
 
@@ -70,50 +71,50 @@ public class ArrayCompositeDisposableTest {
 
     @Test
     public void disposeRace() {
-        for (int i = 0; i < TestHelper.RACE_DEFAULT_LOOPS; i++) {
-            final ArrayCompositeDisposable acd = new ArrayCompositeDisposable(2);
-
-            Runnable r = new Runnable() {
-                @Override
-                public void run() {
-                    acd.dispose();
-                }
-            };
-
-            TestHelper.race(r, r);
-        }
+//        for (int i = 0; i < TestHelper.RACE_DEFAULT_LOOPS; i++) {
+//            final ArrayCompositeDisposable acd = new ArrayCompositeDisposable(2);
+//
+//            Runnable r = new Runnable() {
+//                @Override
+//                public void run() {
+//                    acd.dispose();
+//                }
+//            };
+//
+//            TestHelper.race(r, r);
+//        }
     }
 
     @Test
     public void replaceRace() {
-        for (int i = 0; i < TestHelper.RACE_DEFAULT_LOOPS; i++) {
-            final ArrayCompositeDisposable acd = new ArrayCompositeDisposable(2);
-
-            Runnable r = new Runnable() {
-                @Override
-                public void run() {
-                    acd.replaceResource(0, Disposables.empty());
-                }
-            };
-
-            TestHelper.race(r, r);
-        }
+//        for (int i = 0; i < TestHelper.RACE_DEFAULT_LOOPS; i++) {
+//            final ArrayCompositeDisposable acd = new ArrayCompositeDisposable(2);
+//
+//            Runnable r = new Runnable() {
+//                @Override
+//                public void run() {
+//                    acd.replaceResource(0, Disposables.empty());
+//                }
+//            };
+//
+//            TestHelper.race(r, r);
+//        }
     }
 
     @Test
     public void setRace() {
-        for (int i = 0; i < TestHelper.RACE_DEFAULT_LOOPS; i++) {
-            final ArrayCompositeDisposable acd = new ArrayCompositeDisposable(2);
-
-            Runnable r = new Runnable() {
-                @Override
-                public void run() {
-                    acd.setResource(0, Disposables.empty());
-                }
-            };
-
-            TestHelper.race(r, r);
-        }
+//        for (int i = 0; i < TestHelper.RACE_DEFAULT_LOOPS; i++) {
+//            final ArrayCompositeDisposable acd = new ArrayCompositeDisposable(2);
+//
+//            Runnable r = new Runnable() {
+//                @Override
+//                public void run() {
+//                    acd.setResource(0, Disposables.empty());
+//                }
+//            };
+//
+//            TestHelper.race(r, r);
+//        }
     }
 
 }

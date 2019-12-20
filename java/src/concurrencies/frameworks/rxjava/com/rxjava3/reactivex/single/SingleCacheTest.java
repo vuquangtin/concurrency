@@ -11,11 +11,16 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.single;
+package com.rxjava3.reactivex.single;
 
 import org.junit.Test;
 
 import com.rxjava3.reactivex.exceptions.TestException;
+
+import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.observers.TestObserver;
+import io.reactivex.rxjava3.subjects.PublishSubject;
+import io.reactivex.rxjava3.subscribers.TestSubscriber;
 
 public class SingleCacheTest {
 

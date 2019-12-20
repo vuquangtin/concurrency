@@ -11,16 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.flowable;
-
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.core.FlowableConverter;
-import io.reactivex.rxjava3.core.FlowableOperator;
-import io.reactivex.rxjava3.internal.operators.flowable.FlowableFilter;
-import io.reactivex.rxjava3.internal.operators.flowable.FlowableMap;
-import io.reactivex.rxjava3.internal.util.ExceptionHelper;
-import io.reactivex.rxjava3.observers.DefaultObserver;
-import io.reactivex.rxjava3.subscribers.DefaultSubscriber;
+package com.rxjava3.reactivex.flowable;
 
 import java.util.Arrays;
 import java.util.List;
@@ -32,6 +23,21 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.FlowableConverter;
+import io.reactivex.rxjava3.core.FlowableOperator;
+import io.reactivex.rxjava3.functions.BiFunction;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.functions.Function;
+import io.reactivex.rxjava3.functions.Predicate;
+import io.reactivex.rxjava3.internal.operators.flowable.FlowableFilter;
+import io.reactivex.rxjava3.internal.operators.flowable.FlowableMap;
+import io.reactivex.rxjava3.internal.util.ExceptionHelper;
+import io.reactivex.rxjava3.observers.DefaultObserver;
+import io.reactivex.rxjava3.observers.TestObserver;
+import io.reactivex.rxjava3.schedulers.Schedulers;
+import io.reactivex.rxjava3.subscribers.DefaultSubscriber;
 
 public class FlowableConversionTest {
 

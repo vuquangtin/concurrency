@@ -11,15 +11,20 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.tck;
+package com.rxjava3.reactivex.tck;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import org.reactivestreams.Processor;
 import org.reactivestreams.Publisher;
+import org.reactivestreams.tck.IdentityProcessorVerification;
+import org.reactivestreams.tck.TestEnvironment;
+import org.testng.annotations.Test;
 
 import com.rxjava3.reactivex.exceptions.TestException;
+
+import io.reactivex.rxjava3.processors.UnicastProcessor;
 
 @Test
 public class UnicastProcessorTckTest extends IdentityProcessorVerification<Integer> {

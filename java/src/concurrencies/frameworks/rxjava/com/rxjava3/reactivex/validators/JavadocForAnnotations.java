@@ -11,17 +11,21 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.validators;
+package com.rxjava3.reactivex.validators;
 
 import static org.junit.Assert.fail;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.core.Maybe;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
 import org.junit.Test;
+
+import io.reactivex.rxjava3.core.Completable;
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Maybe;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.Single;
 
 /**
  * Checks the source code of the base reactive types and locates missing

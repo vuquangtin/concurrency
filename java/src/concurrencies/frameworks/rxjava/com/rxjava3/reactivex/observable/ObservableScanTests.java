@@ -11,11 +11,16 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.observable;
+package com.rxjava3.reactivex.observable;
 
 import java.util.HashMap;
 
 import org.junit.Test;
+
+import com.rxjava3.reactivex.observable.ObservableEventStream.Event;
+
+import io.reactivex.rxjava3.functions.BiFunction;
+import io.reactivex.rxjava3.functions.Consumer;
 
 public class ObservableScanTests {
 

@@ -11,13 +11,15 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.testsupport;
+package com.rxjava3.reactivex.testsupport;
 
+import java.util.List;
+
+import io.reactivex.rxjava3.functions.Predicate;
+import io.reactivex.rxjava3.internal.functions.ObjectHelper;
 import io.reactivex.rxjava3.internal.fuseable.QueueFuseable;
 import io.reactivex.rxjava3.internal.util.ExceptionHelper;
 import io.reactivex.rxjava3.observers.BaseTestConsumer;
-
-import java.util.List;
 
 /**
  * Base class with shared infrastructure to support TestSubscriber and TestObserver.

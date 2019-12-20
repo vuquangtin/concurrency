@@ -11,16 +11,12 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.processors;
+package com.rxjava3.reactivex.processors;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.core.FlowableSubscriber;
-import io.reactivex.rxjava3.exceptions.ProtocolViolationException;
-import io.reactivex.rxjava3.processors.MulticastProcessor;
 
 import java.io.IOException;
 import java.util.List;
@@ -30,6 +26,17 @@ import org.junit.Test;
 import org.reactivestreams.Subscription;
 
 import com.rxjava3.reactivex.testsupport.TestHelper;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.FlowableSubscriber;
+import io.reactivex.rxjava3.exceptions.MissingBackpressureException;
+import io.reactivex.rxjava3.exceptions.ProtocolViolationException;
+import io.reactivex.rxjava3.functions.Function;
+import io.reactivex.rxjava3.internal.subscriptions.BooleanSubscription;
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
+import io.reactivex.rxjava3.processors.MulticastProcessor;
+import io.reactivex.rxjava3.processors.UnicastProcessor;
+import io.reactivex.rxjava3.subscribers.TestSubscriber;
 
 public class MulticastProcessorTest {
 

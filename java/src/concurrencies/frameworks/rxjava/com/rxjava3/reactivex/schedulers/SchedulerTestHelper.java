@@ -11,15 +11,17 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.schedulers;
+package com.rxjava3.reactivex.schedulers;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.subscribers.DefaultSubscriber;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Scheduler;
+import io.reactivex.rxjava3.subscribers.DefaultSubscriber;
 
 final class SchedulerTestHelper {
     private SchedulerTestHelper() {

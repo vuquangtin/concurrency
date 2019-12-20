@@ -14,23 +14,26 @@
  * limitations under the License.
  */
 
-package io.reactivex.observable;
+package com.rxjava3.reactivex.observable;
 
 import static org.junit.Assert.assertEquals;
-import io.reactivex.rxjava3.core.ObservableTransformer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Observable;
 import java.util.Set;
 
 import org.junit.Test;
 
-import com.rxjava3.reactivex.observable.ObservableCovarianceTest.ActionMovie;
 import com.rxjava3.reactivex.testsupport.TestObserverEx;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.ObservableTransformer;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.functions.Function;
+import io.reactivex.rxjava3.observables.GroupedObservable;
 
 /**
  * Test super/extends of generics.

@@ -11,7 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.observable;
+package com.rxjava3.reactivex.observable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -22,6 +22,11 @@ import java.util.List;
 import org.junit.Test;
 
 import com.rxjava3.reactivex.observable.ObservableCovarianceTest.HorrorMovie;
+import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Media;
+import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Movie;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.Supplier;
 
 public class ObservableMergeTests {
 

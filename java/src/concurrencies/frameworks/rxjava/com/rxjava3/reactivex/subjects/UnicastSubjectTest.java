@@ -11,7 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.subjects;
+package com.rxjava3.reactivex.subjects;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -20,7 +20,6 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.mock;
-import io.reactivex.rxjava3.internal.fuseable.QueueFuseable;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -30,6 +29,15 @@ import org.junit.Test;
 import com.rxjava3.reactivex.exceptions.TestException;
 import com.rxjava3.reactivex.testsupport.TestHelper;
 import com.rxjava3.reactivex.testsupport.TestObserverEx;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.disposables.Disposable;
+import io.reactivex.rxjava3.disposables.Disposables;
+import io.reactivex.rxjava3.internal.fuseable.QueueFuseable;
+import io.reactivex.rxjava3.observers.TestObserver;
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
+import io.reactivex.rxjava3.subjects.Subject;
+import io.reactivex.rxjava3.subjects.UnicastSubject;
 
 public class UnicastSubjectTest extends SubjectTest<Integer> {
 

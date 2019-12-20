@@ -13,13 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.reactivex.flowable;
+package com.rxjava3.reactivex.flowable;
 
 import static org.junit.Assert.assertEquals;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.Test;
+
+import io.reactivex.rxjava3.functions.Consumer;
 
 public class FlowableDoAfterNextTest {
 

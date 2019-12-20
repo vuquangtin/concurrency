@@ -11,10 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.parallel;
-
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.parallel.ParallelFlowable;
+package com.rxjava3.reactivex.parallel;
 
 import java.util.List;
 
@@ -24,6 +21,14 @@ import org.reactivestreams.Subscriber;
 import com.rxjava3.reactivex.exceptions.TestException;
 import com.rxjava3.reactivex.testsupport.TestHelper;
 import com.rxjava3.reactivex.testsupport.TestSubscriberEx;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.exceptions.CompositeException;
+import io.reactivex.rxjava3.exceptions.MissingBackpressureException;
+import io.reactivex.rxjava3.functions.Function;
+import io.reactivex.rxjava3.internal.subscriptions.BooleanSubscription;
+import io.reactivex.rxjava3.parallel.ParallelFlowable;
+import io.reactivex.rxjava3.subscribers.TestSubscriber;
 
 public class ParallelJoinTest {
 

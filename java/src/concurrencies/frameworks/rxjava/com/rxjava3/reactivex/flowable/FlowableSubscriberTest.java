@@ -11,19 +11,12 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.flowable;
+package com.rxjava3.reactivex.flowable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.core.FlowableOperator;
-import io.reactivex.rxjava3.core.FlowableSubscriber;
-import io.reactivex.rxjava3.internal.subscribers.ForEachWhileSubscriber;
-import io.reactivex.rxjava3.processors.PublishProcessor;
-import io.reactivex.rxjava3.subscribers.DefaultSubscriber;
-import io.reactivex.rxjava3.subscribers.ResourceSubscriber;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,6 +36,25 @@ import org.reactivestreams.Subscription;
 
 import com.rxjava3.reactivex.exceptions.TestException;
 import com.rxjava3.reactivex.testsupport.TestHelper;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.FlowableOperator;
+import io.reactivex.rxjava3.core.FlowableSubscriber;
+import io.reactivex.rxjava3.disposables.Disposable;
+import io.reactivex.rxjava3.exceptions.CompositeException;
+import io.reactivex.rxjava3.functions.Action;
+import io.reactivex.rxjava3.functions.BiFunction;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.functions.Predicate;
+import io.reactivex.rxjava3.internal.functions.Functions;
+import io.reactivex.rxjava3.internal.subscribers.ForEachWhileSubscriber;
+import io.reactivex.rxjava3.internal.subscriptions.BooleanSubscription;
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
+import io.reactivex.rxjava3.processors.PublishProcessor;
+import io.reactivex.rxjava3.subscribers.DefaultSubscriber;
+import io.reactivex.rxjava3.subscribers.ResourceSubscriber;
+import io.reactivex.rxjava3.subscribers.SafeSubscriber;
+import io.reactivex.rxjava3.subscribers.TestSubscriber;
 
 public class FlowableSubscriberTest {
 

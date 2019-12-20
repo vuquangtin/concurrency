@@ -11,14 +11,14 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.parallel;
-
-import io.reactivex.rxjava3.internal.subscriptions.EmptySubscription;
-import io.reactivex.rxjava3.parallel.ParallelFlowable;
+package com.rxjava3.reactivex.parallel;
 
 import org.reactivestreams.Subscriber;
 
 import com.rxjava3.reactivex.exceptions.TestException;
+
+import io.reactivex.rxjava3.internal.subscriptions.EmptySubscription;
+import io.reactivex.rxjava3.parallel.ParallelFlowable;
 
 /**
  * Signals two onErrors to each subscriber for testing purposes.

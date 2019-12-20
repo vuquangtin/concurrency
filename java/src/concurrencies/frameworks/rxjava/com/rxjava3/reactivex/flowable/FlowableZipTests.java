@@ -11,12 +11,10 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.flowable;
+package com.rxjava3.reactivex.flowable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.flowables.GroupedFlowable;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -29,6 +27,17 @@ import org.reactivestreams.Publisher;
 import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.CoolRating;
 import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.ExtendedResult;
 import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.HorrorMovie;
+import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.Media;
+import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.Movie;
+import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.Rating;
+import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.Result;
+import com.rxjava3.reactivex.flowable.FlowableEventStream.Event;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.flowables.GroupedFlowable;
+import io.reactivex.rxjava3.functions.BiFunction;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.functions.Function;
 
 public class FlowableZipTests {
 

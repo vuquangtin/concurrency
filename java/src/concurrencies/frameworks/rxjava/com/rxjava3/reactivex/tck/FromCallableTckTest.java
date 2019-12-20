@@ -11,15 +11,16 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.tck;
-
-import io.reactivex.rxjava3.core.Flowable;
+package com.rxjava3.reactivex.tck;
 
 import java.util.concurrent.Callable;
 
 import org.reactivestreams.Publisher;
+import org.testng.annotations.Test;
 
 import com.rxjava3.reactivex.exceptions.TestException;
+
+import io.reactivex.rxjava3.core.Flowable;
 
 @Test
 public class FromCallableTckTest extends BaseTck<Long> {

@@ -11,7 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.subscribers;
+package com.rxjava3.reactivex.subscribers;
 
 import static org.junit.Assert.fail;
 
@@ -24,6 +24,11 @@ import org.junit.Test;
 import org.reactivestreams.Subscription;
 
 import com.rxjava3.reactivex.exceptions.TestException;
+
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
+import io.reactivex.rxjava3.subscribers.SafeSubscriber;
+import io.reactivex.rxjava3.subscribers.TestSubscriber;
 
 public class SafeSubscriberWithPluginTest {
     private final class SubscriptionCancelThrows implements Subscription {

@@ -11,11 +11,13 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.tck;
-
-import io.reactivex.rxjava3.processors.AsyncProcessor;
+package com.rxjava3.reactivex.tck;
 
 import org.reactivestreams.Publisher;
+import org.testng.annotations.Test;
+
+import io.reactivex.rxjava3.processors.AsyncProcessor;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 @Test
 public class AsyncProcessorAsPublisherTckTest extends BaseTck<Integer> {

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.reactivex.exceptions;
+package com.rxjava3.reactivex.exceptions;
 
 import org.junit.Ignore;
 import org.junit.Test;

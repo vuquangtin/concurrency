@@ -11,13 +11,11 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.schedulers;
+package com.rxjava3.reactivex.schedulers;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.internal.schedulers.ComputationScheduler;
 
 import java.util.HashMap;
 import java.util.concurrent.CountDownLatch;
@@ -25,6 +23,15 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.Ignore;
 import org.junit.Test;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Scheduler;
+import io.reactivex.rxjava3.core.Scheduler.Worker;
+import io.reactivex.rxjava3.disposables.Disposables;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.functions.Function;
+import io.reactivex.rxjava3.internal.schedulers.ComputationScheduler;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class ComputationSchedulerTests extends AbstractSchedulerConcurrencyTests {
 

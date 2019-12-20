@@ -11,7 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.subscribers;
+package com.rxjava3.reactivex.subscribers;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -22,9 +22,6 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.subscribers.DefaultSubscriber;
-import io.reactivex.rxjava3.subscribers.ResourceSubscriber;
 
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
@@ -45,6 +42,16 @@ import org.reactivestreams.Subscriber;
 import com.rxjava3.reactivex.exceptions.TestException;
 import com.rxjava3.reactivex.testsupport.TestHelper;
 import com.rxjava3.reactivex.testsupport.TestSubscriberEx;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.internal.subscriptions.BooleanSubscription;
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
+import io.reactivex.rxjava3.schedulers.Schedulers;
+import io.reactivex.rxjava3.subscribers.DefaultSubscriber;
+import io.reactivex.rxjava3.subscribers.ResourceSubscriber;
+import io.reactivex.rxjava3.subscribers.SafeSubscriber;
+import io.reactivex.rxjava3.subscribers.SerializedSubscriber;
+import io.reactivex.rxjava3.subscribers.TestSubscriber;
 
 public class SerializedSubscriberTest {
 

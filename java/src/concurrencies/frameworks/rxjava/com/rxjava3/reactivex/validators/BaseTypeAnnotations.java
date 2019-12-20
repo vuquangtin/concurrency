@@ -14,16 +14,22 @@
 package com.rxjava3.reactivex.validators;
 
 import static org.junit.Assert.fail;
-import io.reactivex.rxjava3.annotations.BackpressureSupport;
-import io.reactivex.rxjava3.annotations.SchedulerSupport;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.core.Maybe;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
 import org.junit.Test;
 import org.reactivestreams.Publisher;
+
+import io.reactivex.rxjava3.annotations.BackpressureSupport;
+import io.reactivex.rxjava3.annotations.CheckReturnValue;
+import io.reactivex.rxjava3.annotations.SchedulerSupport;
+import io.reactivex.rxjava3.core.Completable;
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Maybe;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.Scheduler;
+import io.reactivex.rxjava3.core.Single;
 
 /**
  * Verifies several properties.

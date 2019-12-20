@@ -11,11 +11,12 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.tck;
+package com.rxjava3.reactivex.tck;
 
 import io.reactivex.rxjava3.core.Flowable;
 
 import org.reactivestreams.Publisher;
+import org.testng.annotations.Test;
 
 @Test
 public class AmbArrayTckTest extends BaseTck<Long> {

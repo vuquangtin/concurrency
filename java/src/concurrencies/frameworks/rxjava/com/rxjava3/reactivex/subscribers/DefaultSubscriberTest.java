@@ -11,7 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.subscribers;
+package com.rxjava3.reactivex.subscribers;
 
 import static org.junit.Assert.assertEquals;
 import io.reactivex.rxjava3.core.Flowable;

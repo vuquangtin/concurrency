@@ -11,16 +11,19 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.tck;
-
-import io.reactivex.rxjava3.core.Flowable;
+package com.rxjava3.reactivex.tck;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 import org.reactivestreams.Publisher;
+import org.reactivestreams.tck.PublisherVerification;
+import org.reactivestreams.tck.TestEnvironment;
+import org.testng.annotations.Test;
 
 import com.rxjava3.reactivex.exceptions.TestException;
+
+import io.reactivex.rxjava3.core.Flowable;
 
 /**
  * Base abstract class for Flowable verifications, contains support for creating

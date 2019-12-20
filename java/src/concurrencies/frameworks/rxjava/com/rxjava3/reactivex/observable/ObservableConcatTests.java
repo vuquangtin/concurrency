@@ -10,19 +10,22 @@
  * distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See
  * the License for the specific language governing permissions and limitations under the License.
  */
-package io.reactivex.observable;
+package com.rxjava3.reactivex.observable;
 
 import static org.junit.Assert.assertEquals;
-import io.reactivex.rxjava3.core.ObservableSource;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
 
 import org.junit.Test;
 
 import com.rxjava3.reactivex.observable.ObservableCovarianceTest.HorrorMovie;
+import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Media;
+import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Movie;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.ObservableSource;
+import io.reactivex.rxjava3.core.Observer;
 
 public class ObservableConcatTests {
 

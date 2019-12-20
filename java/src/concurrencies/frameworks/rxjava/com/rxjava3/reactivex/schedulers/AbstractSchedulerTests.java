@@ -11,7 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.schedulers;
+package com.rxjava3.reactivex.schedulers;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
@@ -22,11 +22,6 @@ import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.internal.disposables.SequentialDisposable;
-import io.reactivex.rxjava3.internal.subscriptions.AsyncSubscription;
-import io.reactivex.rxjava3.schedulers.SchedulerRunnableIntrospection;
-import io.reactivex.rxjava3.subscribers.DefaultSubscriber;
 
 import java.util.Arrays;
 import java.util.List;
@@ -41,6 +36,20 @@ import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Scheduler;
+import io.reactivex.rxjava3.disposables.Disposable;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.functions.Function;
+import io.reactivex.rxjava3.internal.disposables.SequentialDisposable;
+import io.reactivex.rxjava3.internal.functions.Functions;
+import io.reactivex.rxjava3.internal.schedulers.TrampolineScheduler;
+import io.reactivex.rxjava3.internal.subscriptions.AsyncSubscription;
+import io.reactivex.rxjava3.internal.subscriptions.BooleanSubscription;
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
+import io.reactivex.rxjava3.schedulers.SchedulerRunnableIntrospection;
+import io.reactivex.rxjava3.subscribers.DefaultSubscriber;
 
 /**
  * Base tests for all schedulers including Immediate/Current.

@@ -10,10 +10,9 @@
  * distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See
  * the License for the specific language governing permissions and limitations under the License.
  */
-package io.reactivex.flowable;
+package com.rxjava3.reactivex.flowable;
 
 import static org.junit.Assert.assertEquals;
-import io.reactivex.rxjava3.core.Flowable;
 
 import java.util.Arrays;
 import java.util.List;
@@ -23,6 +22,10 @@ import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
 
 import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.HorrorMovie;
+import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.Media;
+import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.Movie;
+
+import io.reactivex.rxjava3.core.Flowable;
 
 public class FlowableConcatTests {
 

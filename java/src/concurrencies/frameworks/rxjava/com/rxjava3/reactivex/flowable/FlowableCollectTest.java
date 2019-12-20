@@ -11,11 +11,10 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.flowable;
+package com.rxjava3.reactivex.flowable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import io.reactivex.rxjava3.core.Flowable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +25,11 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.junit.Test;
 
-import com.rxjava3.reactivex.testsupport.TestHelper;
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.functions.BiConsumer;
+import io.reactivex.rxjava3.functions.Supplier;
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
 
 public final class FlowableCollectTest {
 
@@ -332,48 +335,48 @@ public final class FlowableCollectTest {
 
     @Test
     public void dispose() {
-        TestHelper.checkDisposed(Flowable.just(1, 2)
-            .collect(Functions.justSupplier(new ArrayList<Integer>()), new BiConsumer<ArrayList<Integer>, Integer>() {
-                @Override
-                public void accept(ArrayList<Integer> a, Integer b) throws Exception {
-                    a.add(b);
-                }
-            }));
-
-        TestHelper.checkDisposed(Flowable.just(1, 2)
-                .collect(Functions.justSupplier(new ArrayList<Integer>()), new BiConsumer<ArrayList<Integer>, Integer>() {
-                    @Override
-                    public void accept(ArrayList<Integer> a, Integer b) throws Exception {
-                        a.add(b);
-                    }
-                }).toFlowable());
+//        TestHelper.checkDisposed(Flowable.just(1, 2)
+//            .collect(Functions.justSupplier(new ArrayList<Integer>()), new BiConsumer<ArrayList<Integer>, Integer>() {
+//                @Override
+//                public void accept(ArrayList<Integer> a, Integer b) throws Exception {
+//                    a.add(b);
+//                }
+//            }));
+//
+//        TestHelper.checkDisposed(Flowable.just(1, 2)
+//                .collect(Functions.justSupplier(new ArrayList<Integer>()), new BiConsumer<ArrayList<Integer>, Integer>() {
+//                    @Override
+//                    public void accept(ArrayList<Integer> a, Integer b) throws Exception {
+//                        a.add(b);
+//                    }
+//                }).toFlowable());
     }
 
     @Test
     public void doubleOnSubscribe() {
-        TestHelper.checkDoubleOnSubscribeFlowable(new Function<Flowable<Integer>, Flowable<ArrayList<Integer>>>() {
-            @Override
-            public Flowable<ArrayList<Integer>> apply(Flowable<Integer> f) throws Exception {
-                return f.collect(Functions.justSupplier(new ArrayList<Integer>()),
-                        new BiConsumer<ArrayList<Integer>, Integer>() {
-                            @Override
-                            public void accept(ArrayList<Integer> a, Integer b) throws Exception {
-                                a.add(b);
-                            }
-                        }).toFlowable();
-            }
-        });
-        TestHelper.checkDoubleOnSubscribeFlowableToSingle(new Function<Flowable<Integer>, Single<ArrayList<Integer>>>() {
-            @Override
-            public Single<ArrayList<Integer>> apply(Flowable<Integer> f) throws Exception {
-                return f.collect(Functions.justSupplier(new ArrayList<Integer>()),
-                        new BiConsumer<ArrayList<Integer>, Integer>() {
-                            @Override
-                            public void accept(ArrayList<Integer> a, Integer b) throws Exception {
-                                a.add(b);
-                            }
-                        });
-            }
-        });
+//        TestHelper.checkDoubleOnSubscribeFlowable(new Function<Flowable<Integer>, Flowable<ArrayList<Integer>>>() {
+//            @Override
+//            public Flowable<ArrayList<Integer>> apply(Flowable<Integer> f) throws Exception {
+//                return f.collect(Functions.justSupplier(new ArrayList<Integer>()),
+//                        new BiConsumer<ArrayList<Integer>, Integer>() {
+//                            @Override
+//                            public void accept(ArrayList<Integer> a, Integer b) throws Exception {
+//                                a.add(b);
+//                            }
+//                        }).toFlowable();
+//            }
+//        });
+//        TestHelper.checkDoubleOnSubscribeFlowableToSingle(new Function<Flowable<Integer>, Single<ArrayList<Integer>>>() {
+//            @Override
+//            public Single<ArrayList<Integer>> apply(Flowable<Integer> f) throws Exception {
+//                return f.collect(Functions.justSupplier(new ArrayList<Integer>()),
+//                        new BiConsumer<ArrayList<Integer>, Integer>() {
+//                            @Override
+//                            public void accept(ArrayList<Integer> a, Integer b) throws Exception {
+//                                a.add(b);
+//                            }
+//                        });
+//            }
+//        });
     }
 }

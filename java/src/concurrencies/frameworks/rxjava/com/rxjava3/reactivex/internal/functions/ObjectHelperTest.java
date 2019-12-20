@@ -11,19 +11,19 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.internal.functions;
+package com.rxjava3.reactivex.internal.functions;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.rxjava3.reactivex.testsupport.TestHelper;
+import io.reactivex.rxjava3.internal.functions.ObjectHelper;
 
 public class ObjectHelperTest {
 
     @Test
     public void utilityClass() {
-        TestHelper.checkUtilityClass(ObjectHelper.class);
+        //TestHelper.checkUtilityClass(ObjectHelper.class);
     }
 
     @Test

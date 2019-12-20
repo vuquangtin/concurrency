@@ -11,13 +11,18 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.flowable;
-
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.flowables.GroupedFlowable;
+package com.rxjava3.reactivex.flowable;
 
 import org.junit.Test;
 import org.reactivestreams.Publisher;
+
+import com.rxjava3.reactivex.flowable.FlowableEventStream.Event;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.flowables.GroupedFlowable;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.functions.Function;
+import io.reactivex.rxjava3.subscribers.TestSubscriber;
 
 public class FlowableGroupByTests {
 

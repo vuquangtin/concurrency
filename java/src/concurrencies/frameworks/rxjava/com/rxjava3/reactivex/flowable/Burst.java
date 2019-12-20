@@ -10,11 +10,7 @@
  * distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See
  * the License for the specific language governing permissions and limitations under the License.
  */
-package io.reactivex.flowable;
-
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.internal.subscriptions.SubscriptionHelper;
-import io.reactivex.rxjava3.internal.util.BackpressureHelper;
+package com.rxjava3.reactivex.flowable;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,6 +20,10 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.internal.subscriptions.SubscriptionHelper;
+import io.reactivex.rxjava3.internal.util.BackpressureHelper;
 
 /**
  * Creates {@link Flowable} of a number of items followed by either an error or

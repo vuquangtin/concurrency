@@ -11,14 +11,15 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.tck;
+package com.rxjava3.reactivex.tck;
+
+import org.reactivestreams.Publisher;
+import org.testng.annotations.Test;
 
 import io.reactivex.rxjava3.core.BackpressureStrategy;
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.FlowableEmitter;
 import io.reactivex.rxjava3.core.FlowableOnSubscribe;
-
-import org.reactivestreams.Publisher;
 
 @Test
 public class CreateTckTest extends BaseTck<Long> {

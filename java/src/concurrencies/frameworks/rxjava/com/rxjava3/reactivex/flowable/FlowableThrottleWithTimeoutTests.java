@@ -11,11 +11,9 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.flowable;
+package com.rxjava3.reactivex.flowable;
 
 import static org.mockito.Mockito.inOrder;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.processors.PublishProcessor;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,6 +22,10 @@ import org.mockito.InOrder;
 import org.reactivestreams.Subscriber;
 
 import com.rxjava3.reactivex.testsupport.TestHelper;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.processors.PublishProcessor;
+import io.reactivex.rxjava3.schedulers.TestScheduler;
 
 public class FlowableThrottleWithTimeoutTests {
 

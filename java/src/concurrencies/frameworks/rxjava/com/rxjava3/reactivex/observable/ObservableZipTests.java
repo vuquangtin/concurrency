@@ -11,7 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.observable;
+package com.rxjava3.reactivex.observable;
 
 import static org.junit.Assert.assertSame;
 
@@ -19,7 +19,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.NoSuchElementException;
-import java.util.Observable;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -27,6 +26,17 @@ import org.junit.Test;
 import com.rxjava3.reactivex.observable.ObservableCovarianceTest.CoolRating;
 import com.rxjava3.reactivex.observable.ObservableCovarianceTest.ExtendedResult;
 import com.rxjava3.reactivex.observable.ObservableCovarianceTest.HorrorMovie;
+import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Media;
+import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Movie;
+import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Rating;
+import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Result;
+import com.rxjava3.reactivex.observable.ObservableEventStream.Event;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.BiFunction;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.functions.Function;
+import io.reactivex.rxjava3.observables.GroupedObservable;
 
 public class ObservableZipTests {
 

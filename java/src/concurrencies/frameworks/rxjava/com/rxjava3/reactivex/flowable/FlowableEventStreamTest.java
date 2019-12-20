@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.reactivex.flowable;
+package com.rxjava3.reactivex.flowable;
 
 import org.junit.Test;
 

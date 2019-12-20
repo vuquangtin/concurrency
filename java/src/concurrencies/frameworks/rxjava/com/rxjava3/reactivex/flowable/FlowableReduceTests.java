@@ -11,16 +11,19 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.flowable;
+package com.rxjava3.reactivex.flowable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.core.Maybe;
 
 import org.junit.Test;
 
 import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.HorrorMovie;
+import com.rxjava3.reactivex.flowable.FlowableCovarianceTest.Movie;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Maybe;
+import io.reactivex.rxjava3.functions.BiFunction;
 
 public class FlowableReduceTests {
 

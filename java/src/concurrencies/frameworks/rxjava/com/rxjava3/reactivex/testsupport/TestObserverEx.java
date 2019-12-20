@@ -10,16 +10,18 @@
  * distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See
  * the License for the specific language governing permissions and limitations under the License.
  */
-package io.reactivex.testsupport;
+package com.rxjava3.reactivex.testsupport;
+
+import java.util.concurrent.atomic.AtomicReference;
 
 import io.reactivex.rxjava3.core.CompletableObserver;
 import io.reactivex.rxjava3.core.MaybeObserver;
+import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.core.SingleObserver;
+import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.internal.disposables.DisposableHelper;
 import io.reactivex.rxjava3.internal.fuseable.QueueDisposable;
 import io.reactivex.rxjava3.internal.fuseable.QueueFuseable;
-
-import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * An  extended test Observer that records events and allows making assertions about them.

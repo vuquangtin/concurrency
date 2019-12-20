@@ -15,14 +15,16 @@ package com.rxjava3.reactivex.disposables;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import io.reactivex.rxjava3.disposables.Disposable;
-import io.reactivex.rxjava3.disposables.Disposables;
 
 import java.util.concurrent.FutureTask;
 
 import org.junit.Test;
 
-import com.google.common.base.Functions;
+import io.reactivex.rxjava3.disposables.Disposable;
+import io.reactivex.rxjava3.disposables.Disposables;
+import io.reactivex.rxjava3.internal.functions.Functions;
+
+
 
 public class FutureDisposableTest {
 

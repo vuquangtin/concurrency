@@ -15,11 +15,6 @@
  */
 package com.rxjava3.reactivex.observable;
 
-import io.reactivex.rxjava3.core.Observable;
-import io.reactivex.rxjava3.functions.BiFunction;
-import io.reactivex.rxjava3.functions.Consumer;
-import io.reactivex.rxjava3.subjects.BehaviorSubject;
-
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -31,6 +26,11 @@ import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Media;
 import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Movie;
 import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Rating;
 import com.rxjava3.reactivex.observable.ObservableCovarianceTest.Result;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.BiFunction;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.subjects.BehaviorSubject;
 
 public class ObservableCombineLatestTests {
     /**
@@ -77,18 +77,18 @@ public class ObservableCombineLatestTests {
         // FIXME this is no longer allowed
         Observable<Boolean> nullObservable = BehaviorSubject.createDefault((Boolean) null);
         Observable<Boolean> nonNullObservable = BehaviorSubject.createDefault(true);
-        Observable<Boolean> combined =
-                combineLatest(nullObservable, nonNullObservable, new BiFunction<Boolean, Boolean, Boolean>() {
-                    @Override
-                    public Boolean apply(Boolean bool1, Boolean bool2) {
-                        return bool1 == null ? null : bool2;
-                    }
-                });
-        combined.subscribe(new Consumer<Boolean>() {
-            @Override
-            public void accept(Boolean aBoolean) {
-                Assert.assertNull(aBoolean);
-            }
-        });
+//        Observable<Boolean> combined =
+//                combineLatest(nullObservable, nonNullObservable, new BiFunction<Boolean, Boolean, Boolean>() {
+//                    @Override
+//                    public Boolean apply(Boolean bool1, Boolean bool2) {
+//                        return bool1 == null ? null : bool2;
+//                    }
+//                });
+//        combined.subscribe(new Consumer<Boolean>() {
+//            @Override
+//            public void accept(Boolean aBoolean) {
+//                Assert.assertNull(aBoolean);
+//            }
+//        });
     }
 }

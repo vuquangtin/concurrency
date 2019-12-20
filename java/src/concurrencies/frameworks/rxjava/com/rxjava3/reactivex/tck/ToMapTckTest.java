@@ -11,13 +11,15 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.tck;
-
-import io.reactivex.rxjava3.core.Flowable;
+package com.rxjava3.reactivex.tck;
 
 import java.util.Map;
 
 import org.reactivestreams.Publisher;
+import org.testng.annotations.Test;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.internal.functions.Functions;
 
 @Test
 public class ToMapTckTest extends BaseTck<Map<Integer, Integer>> {

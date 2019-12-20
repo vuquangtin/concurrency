@@ -11,7 +11,7 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package io.reactivex.disposables;
+package com.rxjava3.reactivex.disposables;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotSame;
@@ -23,8 +23,6 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.verifyZeroInteractions;
-import io.reactivex.rxjava3.disposables.SerialDisposable;
-import io.reactivex.rxjava3.internal.disposables.DisposableHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +32,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import io.reactivex.rxjava3.disposables.Disposable;
+import io.reactivex.rxjava3.disposables.Disposables;
+import io.reactivex.rxjava3.disposables.SerialDisposable;
+import io.reactivex.rxjava3.internal.disposables.DisposableHelper;
 
 @RunWith(MockitoJUnitRunner.class)
 public class SerialDisposableTests {

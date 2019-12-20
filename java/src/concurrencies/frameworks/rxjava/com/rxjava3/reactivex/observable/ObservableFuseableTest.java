@@ -10,15 +10,16 @@
  * distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See
  * the License for the specific language governing permissions and limitations under the License.
  */
-package io.reactivex.observable;
-
-import io.reactivex.rxjava3.internal.fuseable.QueueFuseable;
+package com.rxjava3.reactivex.observable;
 
 import java.util.Arrays;
 
 import org.junit.Test;
 
 import com.rxjava3.reactivex.testsupport.TestHelper;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.internal.fuseable.QueueFuseable;
 
 public class ObservableFuseableTest {
 
