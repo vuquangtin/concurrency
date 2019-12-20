@@ -1,11 +1,11 @@
 package com.rxjava3.merges;
 
-import java.util.concurrent.TimeUnit;
-
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.ObservableEmitter;
 import io.reactivex.rxjava3.core.ObservableOnSubscribe;
 import io.reactivex.rxjava3.functions.BiFunction;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * java concurrency

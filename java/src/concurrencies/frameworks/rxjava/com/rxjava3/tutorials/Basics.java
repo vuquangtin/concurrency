@@ -1,11 +1,11 @@
 package com.rxjava3.tutorials;
 
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.Action;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Callable;
-
-import io.reactivex.rxjava3.core.Observable;
-import io.reactivex.rxjava3.functions.Action;
 
 @SuppressWarnings("all")
 public class Basics implements Action {

@@ -1,9 +1,9 @@
 package com.rxjava3.filters;
 
-import com.rxjava3.change.entities.Student;
-
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.functions.Consumer;
+
+import com.rxjava3.change.entities.Student;
 
 /**
  * java concurrency

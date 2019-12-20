@@ -1,10 +1,10 @@
 package com.rxjava3.assists;
 
-import java.util.Map;
-
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.functions.Consumer;
 import io.reactivex.rxjava3.functions.Function;
+
+import java.util.Map;
 
 /**
  * java concurrency

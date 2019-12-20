@@ -1,8 +1,8 @@
 package com.rxjava3.reactivex;
 
-import java.io.IOException;
-
 import io.reactivex.rxjava3.core.Observable;
+
+import java.io.IOException;
 
 /**
  * java concurrency

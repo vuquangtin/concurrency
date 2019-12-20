@@ -1,8 +1,8 @@
 package com.rxjava3.reactivex;
 
-import java.util.concurrent.Callable;
-
 import io.reactivex.rxjava3.core.Observable;
+
+import java.util.concurrent.Callable;
 
 /**
  * When a consumer subscribes, the given java.util.concurrent.Callable is

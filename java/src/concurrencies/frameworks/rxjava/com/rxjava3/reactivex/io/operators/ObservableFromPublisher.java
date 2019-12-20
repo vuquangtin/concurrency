@@ -1,10 +1,10 @@
 package com.rxjava3.reactivex.io.operators;
 
 
+import io.reactivex.rxjava3.core.Observable;
+
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
-
-import io.reactivex.rxjava3.core.Observable;
 
 /**
  * 

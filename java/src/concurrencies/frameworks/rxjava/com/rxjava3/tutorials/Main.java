@@ -1,9 +1,9 @@
 package com.rxjava3.tutorials;
 
-import java.util.Arrays;
-
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.functions.Action;
+
+import java.util.Arrays;
 public class Main {
 
 	public static void main(String... args) {

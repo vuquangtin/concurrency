@@ -1,13 +1,12 @@
 package com.rxjava3.schedulers.threads;
 
 import static junit.framework.Assert.assertTrue;
-
-import org.junit.Test;
-
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Scheduler;
 import io.reactivex.rxjava3.observers.TestObserver;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+
+import org.junit.Test;
 
 /**
  * java concurrency

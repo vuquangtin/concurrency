@@ -1,8 +1,8 @@
 package com.rxjava3.reactivex.io.operators;
 
-import java.util.stream.IntStream;
-
 import io.reactivex.rxjava3.core.Observable;
+
+import java.util.stream.IntStream;
 
 /**
  * java concurrency

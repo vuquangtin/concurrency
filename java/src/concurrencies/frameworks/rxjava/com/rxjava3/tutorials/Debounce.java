@@ -1,10 +1,10 @@
 package com.rxjava3.tutorials;
 
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
-
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.ObservableOnSubscribe;
+
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class Debounce {
 

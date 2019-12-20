@@ -1,11 +1,11 @@
 package com.rxjava3.filters;
 
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.Predicate;
+
 import com.rxjava3.change.entities.Person;
 import com.rxjava3.change.entities.Student;
 import com.rxjava3.change.entities.Teacher;
-
-import io.reactivex.rxjava3.core.Observable;
-import io.reactivex.rxjava3.functions.Predicate;
 
 /**
  * java concurrency

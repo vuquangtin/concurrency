@@ -16,11 +16,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import com.rxjava.examples.BufferedReaderIterator;
-
 import rx.Observable;
 import rx.Observer;
 import rx.subjects.PublishSubject;
+
+import com.rxjava.examples.BufferedReaderIterator;
 
 /***
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333

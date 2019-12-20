@@ -1,10 +1,10 @@
 package com.rxjava3.conditions;
 
-import java.util.concurrent.TimeUnit;
-
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.functions.Predicate;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * java concurrency

@@ -1,8 +1,8 @@
 package com.rxjava3.tutorials;
 
-import java.util.concurrent.TimeUnit;
-
 import io.reactivex.rxjava3.core.Observable;
+
+import java.util.concurrent.TimeUnit;
 
 public final class TestObservable {
 

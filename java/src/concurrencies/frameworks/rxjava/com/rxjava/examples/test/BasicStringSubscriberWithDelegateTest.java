@@ -2,11 +2,12 @@ package com.rxjava.examples.test;
 
 import org.apache.log4j.Logger;
 
+import rx.Observable;
+
 import com.rxjava.examples.BasicStringSubscriberWithDelegate;
 import com.rxjava.examples.IResult;
 
 import concurrencies.utilities.Log4jUtils;
-import rx.Observable;
 
 /***
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333

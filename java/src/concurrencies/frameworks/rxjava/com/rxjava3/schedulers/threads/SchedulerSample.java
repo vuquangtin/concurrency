@@ -2,12 +2,12 @@ package com.rxjava3.schedulers.threads;
 
 import java.util.concurrent.Callable;
 
-import com.rxjava3.utils.Utils;
-
 import rx.Observable;
 import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
+
+import com.rxjava3.utils.Utils;
 
 /**
  * java concurrency

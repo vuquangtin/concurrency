@@ -1,10 +1,10 @@
 package com.rxjava3.reactivex;
 
+import io.reactivex.rxjava3.core.Observable;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import io.reactivex.rxjava3.core.Observable;
 
 /***
  * Signals the items from a java.lang.Iterable source (such as Lists, Sets or

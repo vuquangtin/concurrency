@@ -1,5 +1,7 @@
 package com.rxjava3.reactivex.io.operators;
 
+import io.reactivex.rxjava3.core.Observable;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -8,8 +10,6 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 import com.rxjava3.change.entities.Order;
-
-import io.reactivex.rxjava3.core.Observable;
 
 /**
  * 

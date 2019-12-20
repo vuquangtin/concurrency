@@ -1,9 +1,9 @@
 package com.rxjava3.reactivex.io.operators;
 
+import io.reactivex.rxjava3.core.Observable;
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-
-import io.reactivex.rxjava3.core.Observable;
 
 /**
  * 

@@ -1,13 +1,13 @@
 package com.rxjava3.changes;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.ObservableSource;
 import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.functions.Function;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * java concurrency

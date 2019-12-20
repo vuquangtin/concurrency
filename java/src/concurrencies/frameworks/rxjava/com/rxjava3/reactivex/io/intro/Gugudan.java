@@ -1,9 +1,9 @@
 package com.rxjava3.reactivex.io.intro;
 
-import java.util.Scanner;
-
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.functions.Function;
+
+import java.util.Scanner;
 
 /**
  * 

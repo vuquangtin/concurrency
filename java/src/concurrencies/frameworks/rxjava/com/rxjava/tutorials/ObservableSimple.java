@@ -2,9 +2,9 @@ package com.rxjava.tutorials;
 
 import org.apache.log4j.Logger;
 
+import rx.Observable;
 import concurrencies.utilities.Log4jUtils;
 import concurrencies.utilities.LogTest;
-import rx.Observable;
 
 /**
  * java concurrency

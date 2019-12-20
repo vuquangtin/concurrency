@@ -1,16 +1,16 @@
 package com.rxjava3.examples;
 
-import java.util.List;
-import java.util.concurrent.Callable;
-
-import org.reactivestreams.Publisher;
-
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.functions.Consumer;
 import io.reactivex.rxjava3.functions.Function;
 import io.reactivex.rxjava3.functions.Predicate;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+
+import java.util.List;
+import java.util.concurrent.Callable;
+
+import org.reactivestreams.Publisher;
 /**
  * java concurrency
  * 

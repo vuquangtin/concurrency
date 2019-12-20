@@ -1,8 +1,8 @@
 package com.rxjava.tutorials;
 
-import java.util.Arrays;
-
 import io.reactivex.rxjava3.core.Observable;
+
+import java.util.Arrays;
 
 /**
  * java concurrency

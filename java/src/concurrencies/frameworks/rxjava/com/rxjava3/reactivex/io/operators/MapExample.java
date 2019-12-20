@@ -1,11 +1,12 @@
 package com.rxjava3.reactivex.io.operators;
 
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.Function;
+
 import org.apache.log4j.Logger;
 
 import concurrencies.utilities.Log4jUtils;
 import concurrencies.utilities.LogTest;
-import io.reactivex.rxjava3.core.Observable;
-import io.reactivex.rxjava3.functions.Function;
 
 /**
  * 
