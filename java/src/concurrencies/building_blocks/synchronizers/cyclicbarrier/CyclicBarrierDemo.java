@@ -1,54 +1,77 @@
 package synchronizers.cyclicbarrier;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
-/**
- * Design Patterns
- * 
- * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
- * @version 1.0.0
- * @see <a
- *      href="https://github.com/vuquangtin/designpattern">https://github.com/vuquangtin/designpattern</a>
- *
- */
 public class CyclicBarrierDemo {
-	public static void main(String[] args) {
-		Runnable action = new Runnable() {
-			@Override
-			public void run() {
-				String name = Thread.currentThread().getName();
-				System.out.printf("Thread %s " + "executing barrier action.%n",
-						name);
-			}
-		};
-		final CyclicBarrier barrier = new CyclicBarrier(3, action);
-		Runnable task = new Runnable() {
-			@Override
-			public void run() {
-				String name = Thread.currentThread().getName();
-				System.out.printf("%s about to join game...%n", name);
-				try {
-					barrier.await();
-				} catch (BrokenBarrierException bbe) {
-					System.out.println("barrier is broken");
-					return;
-				} catch (InterruptedException ie) {
-					System.out.println("thread interrupted");
-					return;
-				}
-				System.out.printf("%s has joined game%n", name);
-			}
-		};
-		ExecutorService[] executors = new ExecutorService[] {
-				Executors.newSingleThreadExecutor(),
-				Executors.newSingleThreadExecutor(),
-				Executors.newSingleThreadExecutor() };
-		for (ExecutorService executor : executors) {
-			executor.execute(task);
-			executor.shutdown();
-		}
-	}
+
+    private CyclicBarrier cyclicBarrier;
+    private List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());
+    private Random random = new Random();
+    private int NUM_PARTIAL_RESULTS;
+    private int NUM_WORKERS;
+
+    private void runSimulation(int numWorkers, int numberOfPartialResults) {
+        NUM_PARTIAL_RESULTS = numberOfPartialResults;
+        NUM_WORKERS = numWorkers;
+
+        cyclicBarrier = new CyclicBarrier(NUM_WORKERS, new AggregatorThread());
+        System.out.println("Spawning " + NUM_WORKERS + " worker threads to compute " + NUM_PARTIAL_RESULTS + " partial results each");
+        for (int i = 0; i < NUM_WORKERS; i++) {
+            Thread worker = new Thread(new NumberCruncherThread());
+            worker.setName("Thread " + i);
+            worker.start();
+        }
+    }
+
+    class NumberCruncherThread implements Runnable {
+
+        @Override
+        public void run() {
+            String thisThreadName = Thread.currentThread().getName();
+            List<Integer> partialResult = new ArrayList<>();
+            for (int i = 0; i < NUM_PARTIAL_RESULTS; i++) {
+                Integer num = random.nextInt(10);
+                System.out.println(thisThreadName + ": Crunching some numbers! Final result - " + num);
+                partialResult.add(num);
+            }
+            partialResults.add(partialResult);
+            try {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                cyclicBarrier.await();
+            } catch (InterruptedException | BrokenBarrierException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    class AggregatorThread implements Runnable {
+
+        @Override
+        public void run() {
+            String thisThreadName = Thread.currentThread().getName();
+            System.out.println(thisThreadName + ": Computing final sum of " + NUM_WORKERS + " workers, having " + NUM_PARTIAL_RESULTS + " results each.");
+            int sum = 0;
+            for (List<Integer> threadResult : partialResults) {
+                System.out.print("Adding ");
+                for (Integer partialResult : threadResult) {
+                    System.out.print(partialResult + " ");
+                    sum += partialResult;
+                }
+                System.out.println();
+            }
+            System.out.println(Thread.currentThread().getName() + ": Final result = " + sum);
+        }
+
+    }
+
+    public static void main(String[] args) {
+        CyclicBarrierDemo play = new CyclicBarrierDemo();
+        play.runSimulation(5, 3);
+    }
+
 }
