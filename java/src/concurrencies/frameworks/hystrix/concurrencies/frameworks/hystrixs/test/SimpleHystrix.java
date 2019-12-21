@@ -1,8 +1,8 @@
 package concurrencies.frameworks.hystrixs.test;
 
-import com.netflix.hystrix.HystrixCommand;
-import com.netflix.hystrix.HystrixCommandGroupKey;
-import com.netflix.hystrix.HystrixObservableCommand;
+import java.util.Random;
+import java.util.concurrent.TimeoutException;
+
 import rx.Observable;
 import rx.Observer;
 import rx.functions.Action2;
@@ -10,8 +10,9 @@ import rx.functions.Func0;
 import rx.functions.Func2;
 import rx.observables.SyncOnSubscribe;
 
-import java.util.Random;
-import java.util.concurrent.TimeoutException;
+import com.netflix.hystrix.HystrixCommand;
+import com.netflix.hystrix.HystrixCommandGroupKey;
+import com.netflix.hystrix.HystrixObservableCommand;
 
 /**
  * java concurrency

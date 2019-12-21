@@ -1,6 +1,8 @@
 package com.learnrxjava.examples;
 
-import rx.Observable;
+import io.reactivex.rxjava3.core.Observable;
+
+
 
 public class ErrorHandlingBasics {
 
@@ -39,7 +41,7 @@ public class ErrorHandlingBasics {
          * Errors can be handled on any Observable
          */
         Observable.error(new RuntimeException("failed"))
-                .onErrorResumeNext(Observable.just("5) data"))
+                .onErrorResumeWith(Observable.just("5) data"))
                 .subscribe(System.out::println, t -> System.out.println("5) Error: " + t));
 
         /*

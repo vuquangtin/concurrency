@@ -1,12 +1,5 @@
 package concurrencies.frameworks.hystrixs.test;
 
-import com.netflix.hystrix.HystrixCommand;
-import com.netflix.hystrix.HystrixObservableCommand;
-
-import rx.Observable;
-import rx.Observer;
-import rx.observables.BlockingObservable;
-
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
@@ -14,6 +7,13 @@ import java.util.concurrent.TimeoutException;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import rx.Observable;
+import rx.Observer;
+import rx.observables.BlockingObservable;
+
+import com.netflix.hystrix.HystrixCommand;
+import com.netflix.hystrix.HystrixObservableCommand;
 
 /**
  * java concurrency

@@ -121,11 +121,11 @@ public class HelloWorld {
         }).take(10).subscribe(System.out::println);
 
         //Hello World
-        Observable.create(subscriber -> {
-            throw new RuntimeException("failed!");
-        }).onErrorResumeNext(throwable -> {
-            return Observable.just("fallback value");
-        }).subscribe(System.out::println);
+//        Observable.create(subscriber -> {
+//            throw new RuntimeException("failed!");
+//        }).onErrorResumeNext(throwable -> {
+//            return Observable.just("fallback value");
+//        }).subscribe(System.out::println);
 
         Observable.create(subscriber -> {
             throw new RuntimeException("failed!");

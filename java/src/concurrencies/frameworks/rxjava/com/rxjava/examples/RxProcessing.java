@@ -1,5 +1,7 @@
 package com.rxjava.examples;
 
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +29,7 @@ public class RxProcessing {
 		Observable<String> o = Observable.just("1", "2", "3");
 		CountDownLatch latch = new CountDownLatch(1);
 		List<String> results = new ArrayList<>();
-		o.subscribe(new BasicStringSubscriber(results, latch));
+		// o.subscribe(new BasicStringSubscriber(results, latch));
 		System.out.println("--------Print Result------------");
 		System.out.println(Arrays.toString(results.toArray()));
 		System.out.println("Latch=>" + latch.getCount());

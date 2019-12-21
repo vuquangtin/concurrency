@@ -3,8 +3,6 @@ package com.rxjava.examples;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import rx.Observable;
-
 /**
  * 
  * This is the main class which consolidates all the method calls into just the
@@ -37,7 +35,7 @@ public class ObservableUtil {
 		System.out.println("1.1 creating callable task completed");
 
 		System.out.println("2. Creating Observable for list of callables");
-		Observable<QuoteResource> o = rxProcessing.getFromCallableList(f);
+		//Observable<QuoteResource> o = rxProcessing.getFromCallableList(f);
 		// Observable<QuoteResource> o =
 		// rxProcessing.getAsyncFromCallableList(f);
 		System.out.println("2.1 Observable created in: "
@@ -47,7 +45,7 @@ public class ObservableUtil {
 		QuoteSubscriberWithLatch s = new QuoteSubscriberWithLatch();
 		// subscribe to the events
 		System.out.println("4 Starting Subscription ");
-		o.subscribe(s);
+		//o.subscribe(s);
 		System.out.println("4.1Subscription started in: "
 				+ GenericUtil.getMilliElapsed(start));
 
