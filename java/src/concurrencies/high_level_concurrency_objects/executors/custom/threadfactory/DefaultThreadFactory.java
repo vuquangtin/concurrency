@@ -1,4 +1,4 @@
-package com.books.custom_threadfactory;
+package custom.threadfactory;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;

@@ -9,6 +9,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 import org.apache.log4j.Logger;
 
@@ -29,8 +30,9 @@ public class ComposeConcatExample {
 	static Logger logger = Logger.getLogger(ComposeConcatExample.class
 			.getName());
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		logger = Log4jUtils.initLog4j();
+		CountDownLatch latch=new CountDownLatch(1);
 		try {
 			Observable.concat(getMaleObservable(), getFemaleObservable())
 					.observeOn(Schedulers.newThread())
@@ -54,7 +56,7 @@ public class ComposeConcatExample {
 
 						@Override
 						public void onComplete() {
-
+							latch.countDown();
 						}
 					});
 		} catch (Exception ex) {
@@ -65,7 +67,8 @@ public class ComposeConcatExample {
 //				Observable.interval(1, TimeUnit.SECONDS).map(id -> "A" + id),
 //				Observable.interval(1, TimeUnit.SECONDS).map(id -> "B" + id))
 //				.subscribe(System.out::println);
-		Utils.sleep(10000);
+		latch.await();
+		//Utils.sleep(10000);
 	}
 
 	public static Observable<User> getFemaleObservable() {

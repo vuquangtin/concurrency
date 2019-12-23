@@ -1,4 +1,4 @@
-package com.books.custom_threadfactory;
+package custom.threadfactory;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.concurrent.Executors;
