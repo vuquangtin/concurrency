@@ -2,10 +2,11 @@ package com.rxjava3.reactivex.io.singles;
 
 import io.reactivex.rxjava3.core.BackpressureStrategy;
 import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 import org.apache.log4j.Logger;
 
-import rx.Observable;
 import concurrencies.utilities.Log4jUtils;
 import concurrencies.utilities.LogTest;
 
@@ -41,7 +42,7 @@ public class CreateExample {
 			logger.info("Emitting 2nd");
 			subscriber.onNext(2);
 
-			subscriber.onCompleted();
+			//subscriber.onCompleted();
 		});
 
 		// Flowable version same Observable but with a BackpressureStrategy
@@ -58,7 +59,7 @@ public class CreateExample {
 			subscriber.onComplete();
 		}, BackpressureStrategy.MISSING);
 
-		stream.subscribe(val -> logger.info("Subscriber received: " + val),
+		stream.subscribeOn(Schedulers.io()).subscribe(val -> logger.info("Subscriber received: " + val),
 				err -> logger.error("Subscriber received error", err),
 				() -> logger.info("Subscriber got Completed event"));
 

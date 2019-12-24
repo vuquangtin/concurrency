@@ -1,4 +1,4 @@
-package com.rxjava.tutorials;
+package com.rxjava3;
 /**
  * java concurrency
  * 

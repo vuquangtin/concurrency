@@ -1,8 +1,9 @@
-package com.rxjava.tutorials;
+package com.rxjava3;
 
 import org.apache.log4j.Logger;
 
 import rx.Observable;
+import rx.Subscriber;
 import concurrencies.utilities.Log4jUtils;
 import concurrencies.utilities.LogTest;
 
@@ -15,16 +16,26 @@ import concurrencies.utilities.LogTest;
  *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
  *
  */
-public class ObservableSimple {
+public class Part01 {
 	static Logger logger = Logger.getLogger(LogTest.class.getName());
 
 	public static void main(String[] args) {
 		logger = Log4jUtils.initLog4j();
-		Observable.from(new String[] { "url1", "url2", "url3" }).subscribe(
-				url -> System.out.println(url));
+		Observable.from(new Integer[] { 1, 2, 3 }).subscribe(
+				new Subscriber<Integer>() {
+					public void onCompleted() {
 
-		Observable.just(1, 2, 3).map(i -> 10 * i)
-				.subscribe(i -> logger.debug("Result " + "" + i));
+					}
+
+					public void onError(Throwable e) {
+
+					}
+
+					public void onNext(Integer integer) {
+						logger.info("onNext " + String.valueOf(integer));
+					}
+				});
 
 	}
+
 }
