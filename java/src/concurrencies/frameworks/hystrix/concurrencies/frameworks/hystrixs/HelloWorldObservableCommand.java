@@ -35,7 +35,7 @@ public class HelloWorldObservableCommand extends
 	@Override
 	protected Observable<String> construct() {
 
-		return Observable.just("Hello" + this.name);
+		return Observable.just("Hello " + this.name);
 
 	}
 
@@ -47,7 +47,7 @@ public class HelloWorldObservableCommand extends
 		logger.info("Completed executing HelloWorld Command");
 
 		Observable<String> obs = helloWorldCommand.observe();
-		logger.info("obs:" + obs);
+
 		CountDownLatch l = new CountDownLatch(1);
 
 		Subscription sub = obs.subscribe(System.out::println,
