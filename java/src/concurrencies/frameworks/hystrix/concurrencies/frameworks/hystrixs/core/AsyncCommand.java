@@ -9,6 +9,8 @@ import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixCommandKey;
 import com.netflix.hystrix.HystrixObservableCommand;
 
+import concurrencies.frameworks.hystrixs.async.User;
+
 public class AsyncCommand<T> extends HystrixObservableCommand<T> {
 
     private Callable<T> callable;
@@ -39,7 +41,21 @@ public class AsyncCommand<T> extends HystrixObservableCommand<T> {
             }
         });
     }
+    @Override
+	protected Observable<T> resumeWithFallback() {
 
+		return Observable.create(new Observable.OnSubscribe<T>() {
+			@Override
+			public void call(Subscriber<? super T> subscriber) {
+				try {
+					subscriber.onNext(callable.call());
+					subscriber.onCompleted();
+				} catch (Exception ex) {
+					subscriber.onError(ex);
+				}
+			}
+		});
+	}
     public T getFallback() {
         return fallback;
     }
