@@ -421,6 +421,8 @@ Few things to remember:
 
 ## 4. Conclusion
 As we’ve seen, flatMap() is definitively a precious arrow in the RxJava’s quiver but again, “with great power comes great responsibility and often… complexity”. Once you internalize the concept that flatMap()acts as a container that concurrently dispatches the “function that you specify” and catches/merge its output, things get clearer in our mind.
+
 Concurrency only makes sense for Observable and Flowable stream source since Single, Completable and Maybe only provide a maximum of one single emission which, obviously, does not warrant concurrency at all. We’ve seen how to implement concurrency with an Observable source but is it applicable to Flowable as well? Nope… because of backpressure support.
+
 Backpressure is a beast by itself but RxJava2 API’s are helping to substantially handle it transparently as long as you follow some strict rules. We’ll talk about backpressure handling in future posts but in the meantime, suffice to say that there is a special Parallel operator to handle concurrency on Flowable streams.
 
