@@ -2,6 +2,8 @@ package com.rxjava3.utils;
 
 import java.util.List;
 
+import org.springframework.web.client.RestTemplate;
+
 /**
  * java concurrency
  * 
@@ -12,6 +14,13 @@ import java.util.List;
  *
  */
 public class Utils {
+	static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+	public static String numberToAlphabet(long x) {
+		return Character.toString(ALPHABET.charAt((int) x % ALPHABET.length()));
+
+	}
+
 	public static void println(String s) {
 		System.out.println(s);
 	}
@@ -23,9 +32,25 @@ public class Utils {
 			e.printStackTrace();
 		}
 	}
+
 	public static void sleep10000() {
 		sleep(10000);
 	}
+
+	public static String invoke(String URI) {
+		RestTemplate restTemplate = new RestTemplate();
+		String result = restTemplate.getForObject(URI, String.class);
+		return result;
+	}
+
+	public static void hold(long millis) {
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
 }
 
 class Course {
