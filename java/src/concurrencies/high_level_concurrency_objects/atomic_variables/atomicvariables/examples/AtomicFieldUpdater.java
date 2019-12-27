@@ -27,7 +27,7 @@ public class AtomicFieldUpdater {
         private volatile int index;
         //newUpdater(Class对象,字段名)
         //字段更新器需要与字段的访问类型一致
-        private static final AtomicIntegerFieldUpdater integerFieldUpdater =
+        private static final AtomicIntegerFieldUpdater<MyVolatileType> integerFieldUpdater =
                 AtomicIntegerFieldUpdater.newUpdater(MyVolatileType.class, "index");
         //自定义-值
         //必须是volatile
@@ -35,7 +35,7 @@ public class AtomicFieldUpdater {
         private volatile String value;
         //newUpdater(Class对象,字段名)
         //字段更新器需要与字段的访问类型一致
-        private static final AtomicLongFieldUpdater longFieldUpdater = AtomicLongFieldUpdater.newUpdater(MyVolatileType.class, "time");
+        private static final AtomicLongFieldUpdater<MyVolatileType> longFieldUpdater = AtomicLongFieldUpdater.newUpdater(MyVolatileType.class, "time");
 
         //自定义-创建时间
         //必须是volatile；必须是int，不能是Integer
@@ -44,7 +44,7 @@ public class AtomicFieldUpdater {
         private volatile long time;
         //newUpdater(Class对象,字段Class对象,字段名)
         //字段更新器需要与字段的访问类型一致
-        private static final AtomicReferenceFieldUpdater referenceFieldUpdater =
+        private static final AtomicReferenceFieldUpdater<MyVolatileType,String> referenceFieldUpdater =
                 AtomicReferenceFieldUpdater.newUpdater(MyVolatileType.class, String.class, "value");
 
         /**

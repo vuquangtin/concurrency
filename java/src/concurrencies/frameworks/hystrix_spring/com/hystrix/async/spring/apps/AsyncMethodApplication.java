@@ -2,9 +2,11 @@ package com.hystrix.async.spring.apps;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.concurrent.Executor;
 
@@ -25,12 +27,15 @@ import java.util.concurrent.Executor;
  *
  */
 @SpringBootApplication
+//(scanBasePackages = {
+//		"com.hystrix.async.spring.controllers",
+//		"com.hystrix.async.spring.services" })
 @EnableAsync
 public class AsyncMethodApplication {
 
 	public static void main(String[] args) {
 		// close the application context to shut down the custom ExecutorService
-		SpringApplication.run(AsyncMethodApplication.class, args).close();
+		SpringApplication.run(AsyncMethodApplication.class, args);//.close();
 	}
 
 	@Bean
@@ -43,5 +48,8 @@ public class AsyncMethodApplication {
 		executor.initialize();
 		return executor;
 	}
-
+//	@Bean
+//	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+//		return builder.build();
+//	}
 }

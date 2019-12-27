@@ -21,7 +21,7 @@ public class AtomicArrayDemo {
         LOGGER.info("===========原子数组构造器");
         //数组构造器
         AtomicIntegerArray aIntArray = new AtomicIntegerArray(new int[]{1,2,3,4,5});
-        AtomicReferenceArray aStrArray = new AtomicReferenceArray<>(new String []{"David","Jone","Gray"});
+        AtomicReferenceArray<String> aStrArray = new AtomicReferenceArray<>(new String []{"David","Jone","Gray"});
         LOGGER.info("AtomicIntegerArray(int[]):" + aIntArray.toString());
         LOGGER.info("AtomicReferenceArray(String[]):" + aStrArray.toString());
         //长度构造器

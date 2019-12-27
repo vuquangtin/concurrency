@@ -18,8 +18,8 @@ public class Main {
 	public static void main(String[] args) {
 		final int COUNT = 8;
 		final RetryableAsyncExecutor re = new RetryableAsyncExecutor();
-		final ArrayList<String> completedList = new ArrayList();
-		final ArrayList<String> failedList = new ArrayList();
+		final ArrayList<String> completedList = new ArrayList<String>();
+		final ArrayList<String> failedList = new ArrayList<String>();
 
 		for (int i = 0; i < COUNT; ++i) {
 			re.submit(new RetryableAsyncCouchDocFetchTask("Async#" + (i + 1),
