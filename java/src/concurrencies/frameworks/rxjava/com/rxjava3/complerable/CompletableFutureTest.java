@@ -81,7 +81,8 @@ public class CompletableFutureTest {
 
 	@Test
 	public void completedFutureExample() {
-		CompletableFuture cf = CompletableFuture.completedFuture("message");
+		CompletableFuture<String> cf = CompletableFuture
+				.completedFuture("message");
 		assertTrue(cf.isDone());
 		assertEquals("message", cf.getNow(null));
 	}

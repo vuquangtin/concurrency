@@ -23,9 +23,9 @@ public class FutureBasicTask {
         //定义一个线程池
         ExecutorService executorService = Executors.newCachedThreadPool();
         //定义一个Callable对象
-        Callable callable = new Callable() {
+        Callable<Integer> callable = new Callable<Integer>() {
             @Override
-            public Object call() throws Exception {
+            public Integer call() throws Exception {
                 //模拟开始计算
                 try {
                     Thread.sleep(5000);

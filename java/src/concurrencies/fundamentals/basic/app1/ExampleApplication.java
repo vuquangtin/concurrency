@@ -18,8 +18,8 @@ public class ExampleApplication  implements WebMvcConfigurer {
     }
 
     @Bean
-    public FilterRegistrationBean httpFilter(){
-        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+    public FilterRegistrationBean<HttpFilter> httpFilter(){
+        FilterRegistrationBean<HttpFilter> registrationBean = new FilterRegistrationBean<HttpFilter>();
         registrationBean.setFilter(new  HttpFilter());
         registrationBean.addUrlPatterns("/threadLocal/*");
         return registrationBean;

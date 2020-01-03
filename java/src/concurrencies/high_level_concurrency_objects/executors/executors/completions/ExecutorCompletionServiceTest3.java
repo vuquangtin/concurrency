@@ -60,9 +60,9 @@ public class ExecutorCompletionServiceTest3 {
 		// }
 
 		// it's not bad
-		LinkedList<Future> futures = new LinkedList<>();
-		for (Callable c : callables) {
-			Future future = ecs.submit(c);
+		LinkedList<Future<Integer>> futures = new LinkedList<>();
+		for (Callable<Integer> c : callables) {
+			Future<Integer> future = ecs.submit(c);
 			futures.add(future);
 		}
 

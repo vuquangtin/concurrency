@@ -4,7 +4,7 @@ import java.util.concurrent.Exchanger;
 
 public class ExchangerMain {
 	public static void main(String[] args) {
-		Exchanger exchanger = new Exchanger();
+		Exchanger<Object> exchanger = new Exchanger<Object>();
 
 		ExchangerRunnable exchangerRunnable1 = new ExchangerRunnable(exchanger, "A");
 

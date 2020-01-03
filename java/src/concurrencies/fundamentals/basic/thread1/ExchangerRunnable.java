@@ -4,10 +4,10 @@ import java.util.concurrent.Exchanger;
 
 public class ExchangerRunnable implements Runnable {
 
-	Exchanger exchanger = null;
+	Exchanger<Object> exchanger = null;
 	Object object = null;
 
-	public ExchangerRunnable(Exchanger exchanger, Object object) {
+	public ExchangerRunnable(Exchanger<Object> exchanger, Object object) {
 		this.exchanger = exchanger;
 		this.object = object;
 	}

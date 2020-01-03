@@ -13,7 +13,7 @@ public class DelayQueueTest {
 
 	public static void main(String[] args) throws IOException,
 			InterruptedException {
-		DelayQueue<DelayedDemo> delayQueue = new DelayQueue();
+		DelayQueue<DelayedDemo> delayQueue = new DelayQueue<DelayedDemo>();
 		DelayedDemo delayedDemo = new DelayedDemo(10000, 1); // deplay
 																// 设置的不是expire
 																// 时间，

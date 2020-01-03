@@ -39,7 +39,8 @@ public class FlowableFilterUsersByGender {
 						res -> Flowable
 								.fromIterable((Collection) JsonPath.parse(res)
 										.read("$.results", Collection.class)))
-				.filter(a -> ((LinkedHashMap) a).get("gender").equals(gender));
+				.filter(a -> ((LinkedHashMap<Object, Object>) a).get("gender")
+						.equals(gender));
 		return flowable;
 	}
 

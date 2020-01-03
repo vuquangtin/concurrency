@@ -62,7 +62,8 @@ public class Completion {
 
 	public void completionService() {
 		ExecutorService svc = Executors.newFixedThreadPool(NUM_OF_THREADS);
-		CompletionService<String> csvc = new ExecutorCompletionService(svc);
+		CompletionService<String> csvc = new ExecutorCompletionService<String>(
+				svc);
 		for (final String req : printRequests) {
 			csvc.submit(new PrintTask(req));
 		}
@@ -84,7 +85,7 @@ public class Completion {
 
 	}
 
-	private class PrintTask implements Callable {
+	private class PrintTask implements Callable<String> {
 		private final String printString;
 
 		private PrintTask(String print) {
