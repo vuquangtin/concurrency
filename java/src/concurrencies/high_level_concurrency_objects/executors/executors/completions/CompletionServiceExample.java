@@ -60,6 +60,7 @@ public class CompletionServiceExample {
 				e.printStackTrace();
 			}
 		}
+		service.shutdown();
 
 	}
 }
