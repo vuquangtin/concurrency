@@ -1,7 +1,5 @@
 package com.rxjava3.reactivex.io.flowable.consumeapi;
 
-import io.reactivex.rxjava3.core.Flowable;
-
 import java.util.Collection;
 import java.util.LinkedHashMap;
 
@@ -11,7 +9,7 @@ import com.jayway.jsonpath.JsonPath;
 import com.rxjava3.utils.Utils;
 
 import concurrencies.utilities.Log4jUtils;
-import concurrencies.utilities.LogTest;
+import io.reactivex.rxjava3.core.Flowable;
 
 /**
  * java concurrency
@@ -24,7 +22,7 @@ import concurrencies.utilities.LogTest;
  */
 public class FlowableFilterUsersByGender {
 
-	static Logger log = Logger.getLogger(LogTest.class.getName());
+	static Logger log = Logger.getLogger(FlowableFilterUsersByGender.class.getName());
 
 	public static void main(String[] args) {
 		log = Log4jUtils.initLog4j();
