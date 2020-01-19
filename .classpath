@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="java/src/concurrencies/high_level_concurrency_objects/executors"/>
+	<classpathentry kind="src" path="java/src/concurrencies/concurrency_patterns_and_features"/>
+	<classpathentry kind="src" path="java/src/concurrencies/frameworks/spring"/>
+	<classpathentry kind="src" path="java/src/concurrencies/frameworks/enable_async_hystrix_spring"/>
+	<classpathentry kind="src" path="java/src/concurrencies/books"/>
+	<classpathentry kind="src" path="java/src/concurrencies/frameworks/hystrix_spring"/>
+	<classpathentry kind="src" path="java/src/concurrencies/frameworks/rxjava"/>
+	<classpathentry kind="src" path="java/src/concurrencies/frameworks/hystrix"/>
+	<classpathentry kind="src" path="java/src/concurrencies/utilities"/>
+	<classpathentry kind="src" path="java/src/resources"/>
+	<classpathentry kind="src" path="java/src/concurrencies/high_level_concurrency_objects/atomic_variables"/>
+	<classpathentry kind="src" path="java/src/concurrencies/high_level_concurrency_objects/thread_local_random"/>
+	<classpathentry kind="src" path="java/src/concurrencies/high_level_concurrency_objects/concurrent_collections"/>
+	<classpathentry kind="src" path="java/src/concurrencies/asynchronous"/>
+	<classpathentry kind="src" path="java/src/concurrencies/liveness"/>
+	<classpathentry kind="src" path="java/src/concurrencies/fundamentals"/>
+	<classpathentry kind="src" path="java/src/concurrencies/data_synchronization"/>
+	<classpathentry kind="src" path="java/src/concurrencies/guarded_blocks"/>
+	<classpathentry kind="src" path="java/src/concurrencies/thread_creation_and_management"/>
+	<classpathentry kind="src" path="java/src/concurrencies/building_blocks"/>
+	<classpathentry kind="src" path="java/src/concurrencies/concurrency_in_practice"/>
+	<classpathentry kind="src" path="java/src/concurrencies/high_level_concurrency_objects/lock_objects"/>
+	<classpathentry kind="src" path="java/src/concurrencies/thread_objects"/>
+	<classpathentry kind="src" path="java/src/concurrencies/immutable_objects"/>
+	<classpathentry kind="src" path="java/src/concurrencies/thread_notification"/>
+	<classpathentry kind="src" path="java/src/concurrencies/processes_and_threads"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
