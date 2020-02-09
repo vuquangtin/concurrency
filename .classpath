@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="java/src/concurrencies/high_level_concurrency_objects/executors"/>
+	<classpathentry kind="src" path="java/src/concurrencies/features"/>
 	<classpathentry kind="src" path="java/src/concurrencies/concurrency_patterns_and_features"/>
 	<classpathentry kind="src" path="java/src/concurrencies/frameworks/spring"/>
 	<classpathentry kind="src" path="java/src/concurrencies/frameworks/enable_async_hystrix_spring"/>
