@@ -1,10 +1,11 @@
 package com.rxjava3.reactivex.io.subjects;
 
+import io.reactivex.rxjava3.subjects.ReplaySubject;
+
 import org.apache.log4j.Logger;
 
 import concurrencies.utilities.Log4jUtils;
 import concurrencies.utilities.LogTest;
-import io.reactivex.rxjava3.subjects.ReplaySubject;
 
 /**
  * push toàn bộ giá trị đã nhận được trong suốt vòng đời vào Observer.

@@ -13,8 +13,6 @@ import java.util.concurrent.CountDownLatch;
 
 import org.apache.log4j.Logger;
 
-import com.rxjava3.utils.Utils;
-
 import concurrencies.utilities.Log4jUtils;
 
 /**

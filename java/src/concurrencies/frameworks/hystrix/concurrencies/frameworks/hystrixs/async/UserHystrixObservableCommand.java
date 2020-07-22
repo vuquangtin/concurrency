@@ -1,10 +1,10 @@
 package concurrencies.frameworks.hystrixs.async;
 
-import com.netflix.hystrix.HystrixCommandGroupKey;
-import com.netflix.hystrix.HystrixObservableCommand;
-
 import rx.Observable;
 import rx.Subscriber;
+
+import com.netflix.hystrix.HystrixCommandGroupKey;
+import com.netflix.hystrix.HystrixObservableCommand;
 
 /**
  * 

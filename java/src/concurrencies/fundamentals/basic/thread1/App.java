@@ -1,6 +1,5 @@
 package basic.thread1;
 
-import java.util.concurrent.Executors;
 
 class MyTask extends Thread{
     @Override

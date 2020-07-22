@@ -4,19 +4,19 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+import lombok.Data;
+
 import org.junit.Test;
 
+import rx.Observable;
+import rx.Subscriber;
+import rx.observers.TestSubscriber;
+import rx.schedulers.Schedulers;
 
 import com.google.common.collect.ImmutableList;
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixObservableCommand;
-
-import lombok.Data;
-import rx.Observable;
-import rx.Subscriber;
-import rx.observers.TestSubscriber;
-import rx.schedulers.Schedulers;
 /**
  * 
  * 

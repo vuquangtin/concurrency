@@ -3,7 +3,6 @@ package basic.thread1;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-import java.applet.*;
 
 public class HashMapHangDemo {
     final Map<Integer, Object> holder = new HashMap<Integer, Object>();

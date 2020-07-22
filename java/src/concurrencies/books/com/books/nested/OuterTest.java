@@ -1,6 +1,5 @@
 package com.books.nested;
 
-import com.books.nested.Outer.Inner;
 
 public class OuterTest {
 	public static void main(String[] args) {

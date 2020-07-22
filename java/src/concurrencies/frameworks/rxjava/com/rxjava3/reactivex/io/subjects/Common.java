@@ -1,10 +1,9 @@
 package com.rxjava3.reactivex.io.subjects;
 
-import org.apache.log4j.Logger;
-
-import concurrencies.utilities.LogTest;
 import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.disposables.Disposable;
+
+import org.apache.log4j.Logger;
 
 /**
  * java concurrency

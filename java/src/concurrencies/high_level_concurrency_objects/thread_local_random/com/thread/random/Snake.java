@@ -1,6 +1,6 @@
 package com.thread.random;
 
-import java.awt.*;
+import java.awt.Point;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**

@@ -5,12 +5,12 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
+
+import concurrencies.utilities.Log4jUtils;
 
 public class CompletableFutureTest {
-	static final Logger logger = LoggerFactory
-			.getLogger(CompletableFutureTest.class);
+	public static Logger logger = Logger.getLogger(CompletableFutureTest.class);
 	static int value = 75;
 
 	static {
@@ -24,6 +24,7 @@ public class CompletableFutureTest {
 
 	public static void main(String[] args) throws ExecutionException,
 			InterruptedException {
+		logger = Log4jUtils.initLog4j();
 		System.out.println(value);
 
 		logger.info(value + "");
@@ -32,14 +33,15 @@ public class CompletableFutureTest {
 		logger.info(value + "");
 		ExecutorService executorService = Executors.newCachedThreadPool();
 		CompletableFuture<String> c1 = CompletableFuture.supplyAsync(() -> {
-			System.out.println("abc");
+			logger.debug("call abc");
 			return "abc";
 		}, executorService);
 		CompletableFuture<String> completableFuture = CompletableFuture
 				.supplyAsync(() -> getData(10)).thenApply(
 						data -> applyData(data));
-		System.out.println(completableFuture.get());
+		logger.debug(completableFuture.get());
 		executorService.shutdown();
+		logger.debug("shutdown");
 	}
 
 	private static String applyData(String data) {

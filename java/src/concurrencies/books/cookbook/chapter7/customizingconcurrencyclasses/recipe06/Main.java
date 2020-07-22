@@ -1,6 +1,5 @@
 package cookbook.chapter7.customizingconcurrencyclasses.recipe06;
 
-import java.util.Set;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 

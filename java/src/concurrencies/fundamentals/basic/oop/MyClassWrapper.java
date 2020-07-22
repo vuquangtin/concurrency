@@ -1,8 +1,10 @@
 package basic.oop;
 
-import java.io.*;
-import java.lang.reflect.*;
-import java.util.jar.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 
 final class MyClassWrapper {
 

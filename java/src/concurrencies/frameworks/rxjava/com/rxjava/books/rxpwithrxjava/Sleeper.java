@@ -8,12 +8,12 @@ package com.rxjava.books.rxpwithrxjava;
  *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
  *
  */
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.time.Duration;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Sleeper {
 

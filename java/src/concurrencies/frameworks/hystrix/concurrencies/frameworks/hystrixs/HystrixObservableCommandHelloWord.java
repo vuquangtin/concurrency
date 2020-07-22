@@ -1,8 +1,9 @@
 package concurrencies.frameworks.hystrixs;
 
+import rx.Observable;
+
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixObservableCommand;
-import rx.Observable;
 
 /**
  * java concurrency

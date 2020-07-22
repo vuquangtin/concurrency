@@ -1,7 +1,5 @@
 package com.rxjava3.reactivex.io.subjects;
 
-import io.reactivex.rxjava3.core.Observer;
-import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.subjects.PublishSubject;
 
 import org.apache.log4j.Logger;

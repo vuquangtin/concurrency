@@ -1,7 +1,9 @@
 package com.deadlocks;
 
-import java.util.concurrent.locks.*;
-import java.lang.management.*;
+import java.lang.management.ManagementFactory;
+import java.lang.management.ThreadInfo;
+import java.lang.management.ThreadMXBean;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class LockTest {
 

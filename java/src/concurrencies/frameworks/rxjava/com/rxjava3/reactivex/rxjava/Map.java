@@ -1,8 +1,8 @@
 package com.rxjava3.reactivex.rxjava;
 
-import java.util.concurrent.TimeUnit;
-
 import io.reactivex.rxjava3.core.Observable;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * 

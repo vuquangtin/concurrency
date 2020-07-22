@@ -1,9 +1,4 @@
 package com.rxjava3;
-import java.util.List;
-import java.util.concurrent.Callable;
-
-import org.reactivestreams.Publisher;
-
 /**
  * 
  * 
@@ -19,6 +14,11 @@ import io.reactivex.rxjava3.functions.Consumer;
 import io.reactivex.rxjava3.functions.Function;
 import io.reactivex.rxjava3.functions.Predicate;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+
+import java.util.List;
+import java.util.concurrent.Callable;
+
+import org.reactivestreams.Publisher;
 
 public class Main {
     public static void main(String[] args) {

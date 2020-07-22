@@ -1,10 +1,11 @@
 package com.rxjava3.reactivex.io.subjects;
 
+import io.reactivex.rxjava3.subjects.BehaviorSubject;
+
 import org.apache.log4j.Logger;
 
 import concurrencies.utilities.Log4jUtils;
 import concurrencies.utilities.LogTest;
-import io.reactivex.rxjava3.subjects.BehaviorSubject;
 
 /**
  * Khi observer subscribe một behavior subject thì ngay lập tức behavior subjet

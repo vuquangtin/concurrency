@@ -1,5 +1,7 @@
 package com.rxjava3.reactivex.io.flowable.consumeapi;
 
+import io.reactivex.rxjava3.core.Flowable;
+
 import java.util.Collection;
 import java.util.LinkedHashMap;
 
@@ -9,7 +11,6 @@ import com.jayway.jsonpath.JsonPath;
 import com.rxjava3.utils.Utils;
 
 import concurrencies.utilities.Log4jUtils;
-import io.reactivex.rxjava3.core.Flowable;
 
 /**
  * java concurrency

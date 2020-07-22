@@ -1,5 +1,6 @@
 package com.rxjava3.reactivex.io.flowable.operators;
 
+import static io.reactivex.rxjava3.core.Flowable.timer;
 import io.reactivex.rxjava3.core.Flowable;
 
 import java.util.concurrent.TimeUnit;
@@ -8,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.rxjava3.utils.Utils;
-import static io.reactivex.rxjava3.core.Flowable.timer;
 
 public class FlowableDelayAlt {
 

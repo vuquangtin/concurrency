@@ -1,9 +1,9 @@
 package com.rxjava3.reactivex.rxjava;
 
+import io.reactivex.rxjava3.core.Observable;
+
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-
-import io.reactivex.rxjava3.core.Observable;
 
 /**
  * 

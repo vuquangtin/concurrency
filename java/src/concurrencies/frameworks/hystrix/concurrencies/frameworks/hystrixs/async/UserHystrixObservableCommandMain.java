@@ -1,7 +1,5 @@
 package concurrencies.frameworks.hystrixs.async;
 
-import java.util.concurrent.ExecutionException;
-
 import org.apache.log4j.Logger;
 
 import concurrencies.utilities.Log4jUtils;

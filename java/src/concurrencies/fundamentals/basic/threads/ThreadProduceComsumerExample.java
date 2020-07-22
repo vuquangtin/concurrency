@@ -3,7 +3,7 @@ package basic.threads;
 
 //Java program to implement solution of producer 
 //consumer problem. 
-import java.util.LinkedList; 
+import java.util.LinkedList;
 
 public class ThreadProduceComsumerExample 
 { 

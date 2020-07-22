@@ -1,6 +1,5 @@
 package basic.oop;
 
-import java.io.IOException;
 
 class ArraySizeException extends RuntimeException {
 	ArraySizeException() // constructor

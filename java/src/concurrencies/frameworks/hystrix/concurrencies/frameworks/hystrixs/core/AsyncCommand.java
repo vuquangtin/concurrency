@@ -9,8 +9,6 @@ import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixCommandKey;
 import com.netflix.hystrix.HystrixObservableCommand;
 
-import concurrencies.frameworks.hystrixs.async.User;
-
 public class AsyncCommand<T> extends HystrixObservableCommand<T> {
 
     private Callable<T> callable;

@@ -1,8 +1,5 @@
 package com.rxjava3.reactivex.io.flowable.threadpools;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -11,6 +8,9 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class StringsGenerator {
 

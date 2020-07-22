@@ -1,6 +1,5 @@
 package cookbook.chapter1.threadmanagement.recipe08;
 
-import java.io.File;
 
 /**
  * Runnable class than throws and Exception
