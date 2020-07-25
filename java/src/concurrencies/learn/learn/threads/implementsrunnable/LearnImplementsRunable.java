@@ -6,6 +6,7 @@ package learn.threads.implementsrunnable;
  *      如果自己的类已经extends另一个类，就无法直接extends Thread，此时，可以实现一个Runnable接口
  */
 public class LearnImplementsRunable implements Runnable{
+	int m=100;
     @Override
     public void run() {
         System.out.println("LearnImplementsRunable");
