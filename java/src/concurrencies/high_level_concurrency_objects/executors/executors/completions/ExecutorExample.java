@@ -30,7 +30,7 @@ public class ExecutorExample {
 				executor);
 		Future<String> contentsFuture = null;
 		for (int i = 0; i < 10; i++) {
-			pool.submit(new SimpleThread());
+			contentsFuture=pool.submit(new SimpleThread());
 		}
 
 		for (int i = 0; i < 10; i++) {

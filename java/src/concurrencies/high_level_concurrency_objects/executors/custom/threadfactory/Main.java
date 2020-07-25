@@ -25,7 +25,13 @@ public class Main {
 
 		ThreadFactory newCustomThreadfactory = new ThreadFactoryBuilder().setNamePrefix("ImageDownloadersPool-Thread")
 				.build();
+		ExecutorService newCustomFixedThreadPool = Executors.newFixedThreadPool(3, newCustomThreadfactory);
+		newCustomFixedThreadPool.submit(() -> {
+			System.out.println("hello");
+		});
 		int x = 0;
 		System.out.println(x);
+		newFixedThreadPool.shutdown();
+		newCustomFixedThreadPool.shutdown();
 	}
 }

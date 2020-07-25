@@ -31,6 +31,7 @@ public class ExecutorCompletionServiceTest<T> {
         });
 
         pool.shutdown();
+        
     }
     private void test(){
         ExecutorCompletionService<T> executorCompletionService = new ExecutorCompletionService<>(Executors.newFixedThreadPool(10));

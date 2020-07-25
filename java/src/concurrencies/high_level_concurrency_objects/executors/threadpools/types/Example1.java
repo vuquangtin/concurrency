@@ -22,6 +22,17 @@ public class Example1 {
 		service.execute(new Task3());
 
 		service.shutdown();
+		final int x = 10;
+		init(x);
+		final Task1 task=new Task1();
+		init(task);
+	}
+
+	public static void init(Task1 k) {
+		 k=new Task1();
+	}
+
+	public static void init(int k) {
 	}
 
 	static class Task1 implements Runnable {
