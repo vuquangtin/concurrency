@@ -61,6 +61,7 @@ class MyRunnableABC implements Runnable {
 					System.out.print(value);
 					count++;
 					this.state.incrState();
+					//System.out.println(count);
 				}
 			}
 		}

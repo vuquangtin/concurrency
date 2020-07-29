@@ -1,5 +1,7 @@
 package concurrency.java.memory.model.jmm;
 
+import org.apache.log4j.Logger;
+
 import core.java.base.TemplateMethod;
 
 /**
@@ -38,6 +40,7 @@ public class JavaMemoryModel extends TemplateMethod {
 
 		public void methodTwo() {
 			Integer localVariable1 = new Integer(99);
+			logger.debug(localVariable1);
 
 			// ... do more with local variable.
 		}
@@ -70,6 +73,7 @@ public class JavaMemoryModel extends TemplateMethod {
 
 	@Override
 	public void implementionTwo(String[] args) throws Exception {
+		logger.debug("call");
 		Thread t1 = new Thread(new MyObjectRunnable());
 		t1.start();
 		MyObjectRunnable ob = new MyObjectRunnable();
@@ -131,20 +135,23 @@ public class JavaMemoryModel extends TemplateMethod {
 }
 
 class MyObjectRunnable implements Runnable {
+	protected static Logger logger = Logger.getLogger(MyObjectRunnable.class
+			.getName());
 	MyObject m = new MyObject();
 	MyObject m2 = new MyObject();
 
 	public void run() {
+		logger.debug(this);
 		mInMethod();
 	}
 
 	public void mInMethod() {
 		MyObject m3 = new MyObject();
 		MyObject m4 = new MyObject();
-		System.out.println("m3:\t" + m3);
-		System.out.println("m4:\t" + m4);
-		System.out.println("m:\t" + m);
-		System.out.println("m2:\t" + m2);
+		logger.debug("m3:\t" + m3);
+		logger.debug("m4:\t" + m4);
+		logger.debug("m:\t" + m);
+		logger.debug("m2:\t" + m2);
 	}
 
 }
