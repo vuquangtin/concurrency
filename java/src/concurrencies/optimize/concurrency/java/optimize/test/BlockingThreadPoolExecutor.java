@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import concurrency.java.optimize.tasks.PriorityThreadFactory;
+import concurrency.java.optimize.factory.PriorityThreadFactory;
 
 /**
  * 

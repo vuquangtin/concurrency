@@ -1,7 +1,11 @@
 package concurrency.java.optimize.executor.test;
 
-import static org.junit.Assert.*;
-import static concurrency.java.optimize.executor.BoundedStrategy.*;
+import static concurrency.java.optimize.executor.BoundedStrategy.BLOCK;
+import static concurrency.java.optimize.executor.BoundedStrategy.REJECT;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;

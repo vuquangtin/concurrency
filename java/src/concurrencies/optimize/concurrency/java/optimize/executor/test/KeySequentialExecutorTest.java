@@ -1,9 +1,6 @@
 package concurrency.java.optimize.executor.test;
 
-import org.junit.Test;
-
-import concurrency.java.optimize.executor.KeyRunnable;
-import concurrency.java.optimize.executor.KeySequentialExecutor;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -12,7 +9,10 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+import concurrency.java.optimize.executor.KeyRunnable;
+import concurrency.java.optimize.executor.KeySequentialExecutor;
 /**
  * 
  * 

@@ -3,11 +3,7 @@ package executors.customthreadpoolexecutor.feature;
 import static java.lang.System.out;
 
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collectors;
 
 public class Java8_0700_ParallelOperation {
 

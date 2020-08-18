@@ -7,9 +7,9 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.log4j.Logger;
-
 import lombok.NonNull;
+
+import org.apache.log4j.Logger;
 
 /**
  * F

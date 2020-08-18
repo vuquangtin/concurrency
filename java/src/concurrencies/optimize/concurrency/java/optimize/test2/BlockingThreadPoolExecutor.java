@@ -9,7 +9,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import concurrency.java.optimize.MyRunnable;
+import concurrency.java.optimize.tasks.MyRunnable;
 /**
  * 
  * 

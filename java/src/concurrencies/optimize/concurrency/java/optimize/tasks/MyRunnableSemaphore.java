@@ -1,6 +1,7 @@
-package concurrency.java.optimize;
+package concurrency.java.optimize.tasks;
 
 import java.util.Random;
+import java.util.concurrent.Semaphore;
 
 /**
  * 
@@ -8,22 +9,18 @@ import java.util.Random;
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/concurrency">https://github.com/
+
  *      vuquangtin/concurrency</a>
  *
  */
-public class MyRunnable implements Runnable {
+public class MyRunnableSemaphore implements Runnable {
 	private int id;
 	private String name;
+	Semaphore semaphone;
 
-	public MyRunnable(String name) {
-		this.name = name;
-	}
-
-	public MyRunnable() {
-	}
-
-	public MyRunnable(int id) {
+	public MyRunnableSemaphore(int id, Semaphore semaphone) {
 		this.id = id;
+		this.semaphone = semaphone;
 	}
 
 	@Override
@@ -36,11 +33,12 @@ public class MyRunnable implements Runnable {
 			e.printStackTrace();
 		}
 		System.out.println("end MyRunnable:" + id);
+		semaphone.release();
 
 	}
 
 	public String getName() {
-		
+
 		return this.name;
 	}
 

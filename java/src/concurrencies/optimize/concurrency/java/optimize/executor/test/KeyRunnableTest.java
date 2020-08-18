@@ -1,10 +1,10 @@
 package concurrency.java.optimize.executor.test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
 import org.junit.Test;
 
 import concurrency.java.optimize.executor.KeyRunnable;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 /**
  * 
  * 

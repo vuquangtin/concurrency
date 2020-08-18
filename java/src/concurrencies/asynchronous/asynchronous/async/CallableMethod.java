@@ -1,5 +1,4 @@
 package asynchronous.async;
-import java.lang.Thread;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 

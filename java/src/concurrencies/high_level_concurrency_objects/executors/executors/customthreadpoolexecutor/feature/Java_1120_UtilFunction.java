@@ -2,13 +2,11 @@ package executors.customthreadpoolexecutor.feature;
 
 import static java.lang.System.out;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.IntBinaryOperator;
-import java.util.function.Predicate;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Java_1120_UtilFunction {
 

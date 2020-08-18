@@ -7,9 +7,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.apache.log4j.Logger;
 
 import concurrencies.utilities.Log4jUtils;
+import concurrency.java.optimize.tasks.MyRunnable;
 
 /**
  * 
+ * JavaThreadingOptimizationUsingThreadPoolExecutor
  * 
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
@@ -17,9 +19,9 @@ import concurrencies.utilities.Log4jUtils;
  *      href="https://github.com/vuquangtin/concurrency">https://github.com/vuquangtin/concurrency</a>
  *
  */
-public class JavaThreadingOptimizationUsingThreadPoolExecutor {
+public class JTOUsingThreadPoolExecutor {
 	static Logger logger = Logger
-			.getLogger(JavaThreadingOptimizationUsingThreadPoolExecutor.class
+			.getLogger(JTOUsingThreadPoolExecutor.class
 					.getName());
 	private static final int queueSize = 250;
 	private static final int queueSizeSleep = 1000;

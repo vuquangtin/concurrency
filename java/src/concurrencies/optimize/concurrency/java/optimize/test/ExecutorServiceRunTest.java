@@ -5,8 +5,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import concurrency.java.optimize.MyRunnable;
-import learn.threads.vn.RunnableTest;
+import concurrency.java.optimize.tasks.MyRunnable;
 
 /**
  * 

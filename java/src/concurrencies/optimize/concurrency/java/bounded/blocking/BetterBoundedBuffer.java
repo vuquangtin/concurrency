@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 
 import com.java.concurrency.Building_Custom_Synchronizers.BaseBoundedBuffer;
 
-import concurrency.java.optimize.JavaThreadingOptimizationUsingThreadPoolExecutor;
+import concurrencies.utilities.Log4jUtils;
 
 /**
  * 
@@ -15,13 +15,15 @@ import concurrency.java.optimize.JavaThreadingOptimizationUsingThreadPoolExecuto
  * @author EMAIL:vuquangtin@gmail.com , tel:0377443333
  * @version 1.0.0
  * @see <a href="https://github.com/vuquangtin/concurrency">https://github.com/
+
  *      vuquangtin/concurrency</a>
  *
  */
 public class BetterBoundedBuffer<V> extends BaseBoundedBuffer<V> {
 	// 条件谓词: not-full (!isFul1())
 	// 条件谓词: not - empty (!isEmpty())
-	static Logger logger = Logger.getLogger(BetterBoundedBuffer.class.getName());
+	static Logger logger = Logger
+			.getLogger(BetterBoundedBuffer.class.getName());
 
 	public BetterBoundedBuffer(int size) {
 		super(size);
@@ -72,19 +74,36 @@ public class BetterBoundedBuffer<V> extends BaseBoundedBuffer<V> {
 	}
 
 	public static void main(String[] args) {
+		logger = Log4jUtils.initLog4j();
 		ExecutorService executorService = Executors.newFixedThreadPool(6);
 		final BetterBoundedBuffer boundedBuffer = new BetterBoundedBuffer(5);
-		for (int i = 1; i < 7; i++) {
+		for (int i = 1; i < 70; i++) {
 			int finalI = i;
 			executorService.submit(() -> {
 				Thread.currentThread().setName("线程" + finalI);
 				try {
-					if (finalI == 6) {
-						Thread.sleep(5000);
+					//if (finalI == 6) {
+					//	Thread.sleep(500);
 						boundedBuffer.put(finalI);
-					} else {
+					//} else {
+					//	boundedBuffer.take();
+					//}
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			});
+		}
+		for (int i = 1; i < 70; i++) {
+			int finalI = i;
+			executorService.submit(() -> {
+				Thread.currentThread().setName("线程" + finalI);
+				try {
+					//if (finalI == 6) {
+					//	Thread.sleep(500);
+					//	boundedBuffer.put(finalI);
+					//} else {
 						boundedBuffer.take();
-					}
+					//}
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}

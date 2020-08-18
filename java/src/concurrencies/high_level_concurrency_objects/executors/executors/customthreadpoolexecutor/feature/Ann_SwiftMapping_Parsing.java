@@ -1,7 +1,7 @@
 package executors.customthreadpoolexecutor.feature;
 
-import static java.lang.System.out;
 import static java.lang.System.err;
+import static java.lang.System.out;
 
 @Ann_SwiftMapping(isinDetails="US-000402625-0")
 class Ann_SwiftMapping_App {

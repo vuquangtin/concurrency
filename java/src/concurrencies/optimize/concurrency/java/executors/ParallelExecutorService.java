@@ -10,8 +10,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.log4j.Logger;
 
-import concurrency.java.optimize.JavaThreadingOptimizationUsingThreadPoolExecutor;
-
 /**
  * 
  * 

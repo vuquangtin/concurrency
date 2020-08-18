@@ -1,7 +1,6 @@
 package executors.customthreadpoolexecutor.feature;
 
 import static java.lang.System.out;
-import static java.util.Collections.sort;
 
 import java.util.ArrayList;
 import java.util.Arrays;

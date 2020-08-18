@@ -2,8 +2,6 @@ package os.mechanical.sympathy;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-import com.google.common.base.Preconditions;
-
 /**
  * 
  * 

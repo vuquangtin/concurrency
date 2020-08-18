@@ -9,8 +9,6 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
-import concurrency.java.optimize.JavaThreadingOptimizationUsingThreadPoolExecutor;
-
 /**
  * 
  * 
@@ -21,9 +19,7 @@ import concurrency.java.optimize.JavaThreadingOptimizationUsingThreadPoolExecuto
  *
  */
 public class ThreadPoolTest2 {
-	static Logger logger = Logger
-			.getLogger(JavaThreadingOptimizationUsingThreadPoolExecutor.class
-					.getName());
+	static Logger logger = Logger.getLogger(ThreadPoolTest2.class.getName());
 	private ThreadPoolExecutor executor = null;
 
 	/**

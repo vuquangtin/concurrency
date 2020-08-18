@@ -5,8 +5,8 @@ import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import concurrency.java.optimize.MyRunnable;
-import concurrency.java.optimize.tasks.PriorityThreadFactory;
+import concurrency.java.optimize.factory.PriorityThreadFactory;
+import concurrency.java.optimize.tasks.MyRunnable;
 
 /**
  * 

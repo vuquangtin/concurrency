@@ -2,7 +2,6 @@ package executors.customthreadpoolexecutor.feature;
 
 import static java.lang.System.out;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
