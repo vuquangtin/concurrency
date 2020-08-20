@@ -1,4 +1,7 @@
 package concurrency.java.optimize.tasks;
+
+import java.util.Random;
+
 /**
  * 
  * 
@@ -9,8 +12,10 @@ package concurrency.java.optimize.tasks;
  *
  */
 public class DemoOneTask extends Task {
-    public Object call() throws Exception {
-        System.out.println("=========demo one ========");
-        return null;
-    }
+	public Object call() throws Exception {
+		int pause = new Random().nextInt(1000);
+		System.out.println("=========demo " + pause + " one ========");
+		Thread.sleep(pause);
+		return new Random().nextInt(1000);
+	}
 }

@@ -1,4 +1,7 @@
 # CountDownLatch
+
+>[await đợi cho đến khi countdown=0. chúng ta có thể đặt số lượng await với số lượng không giới hạn trong các Thread cần trờ chứ ko phải await=countdown]
+
 ## Nguyên lý hoạt động
 
 >Lớp CountDownLatch cho phép chúng ta bắt đầu thực hiện một thread X ngay sau khi tất cả các thread A1, A2, A3, ... đều đã hoàn thành.

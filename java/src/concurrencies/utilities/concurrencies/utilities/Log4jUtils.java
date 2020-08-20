@@ -61,4 +61,8 @@ public class Log4jUtils {
 		logger.trace("This is a TRACE message.");
 		return logger;
 	}
+
+	public static void echo(String text) {
+		System.out.println(text);
+	}
 }
