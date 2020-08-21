@@ -1,4 +1,4 @@
-package synchronizers;
+package synchronizers.cyclicbarrier.demo;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

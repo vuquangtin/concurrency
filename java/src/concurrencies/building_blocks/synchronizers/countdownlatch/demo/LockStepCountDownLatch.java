@@ -1,8 +1,10 @@
-package synchronizers;
+package synchronizers.countdownlatch.demo;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import synchronizers.LockStepExample;
 
 /**
  * https://www.javaspecialists.eu/archive/Issue257.html

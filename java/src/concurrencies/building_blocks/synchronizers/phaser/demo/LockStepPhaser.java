@@ -1,8 +1,10 @@
-package synchronizers;
+package synchronizers.phaser.demo;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Phaser;
+
+import synchronizers.LockStepExample;
 
 /**
  * 

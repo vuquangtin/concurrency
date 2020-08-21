@@ -1,4 +1,4 @@
-package synchronizers.phaser2;
+package synchronizers.phaser.demo;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package synchronizers.phaser2;
+package synchronizers.phaser.demo;
 
 import java.util.Random;
 import java.util.concurrent.ExecutorService;

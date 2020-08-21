@@ -1,4 +1,4 @@
-package synchronizers.phaser2;
+package synchronizers.phaser.demo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
