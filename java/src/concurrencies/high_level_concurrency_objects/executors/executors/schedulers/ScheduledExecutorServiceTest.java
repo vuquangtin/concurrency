@@ -74,6 +74,6 @@ public class ScheduledExecutorServiceTest {
 		pool.schedule(timerTask6, 2000, TimeUnit.MILLISECONDS);
 		pool.schedule(timerTask7, 1000, TimeUnit.MILLISECONDS);
 		pool.scheduleAtFixedRate(timerTask2, 0, 1000, TimeUnit.MILLISECONDS);
-		// pool.shutdown();
+		//pool.shutdown();
 	}
 }
