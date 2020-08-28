@@ -8,7 +8,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.apache.log4j.Logger;
 
 import concurrencies.utilities.Log4jUtils;
-import concurrency.java.optimize.tasks.MyRunnable;
 import concurrency.java.optimize.tasks.MyRunnableSemaphore;
 
 /**

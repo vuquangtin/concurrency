@@ -15,10 +15,7 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
-import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-
-import app.synchronizers.cyclicbarrier.Study11CyclicBarrier;
 
 /**
  * 

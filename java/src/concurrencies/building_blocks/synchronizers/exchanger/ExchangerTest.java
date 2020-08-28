@@ -1,13 +1,12 @@
 package synchronizers.exchanger;
 
 import java.util.concurrent.Exchanger;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.log4j.Logger;
 
-import concurrencies.utilities.Log4jUtils;
 import synchronizers.models.DataBuffer;
+import concurrencies.utilities.Log4jUtils;
 
 /**
  * 

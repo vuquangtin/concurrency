@@ -17,12 +17,9 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
-import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 import concurrencies.utilities.Log4jUtils;
-import akka.io.SelectionHandler.ChannelRegistryImpl.Task;
-import app.synchronizers.exchanger.ExchangerGUI;
 
 /**
  * 

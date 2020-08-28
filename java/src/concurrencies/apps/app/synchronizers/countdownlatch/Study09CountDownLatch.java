@@ -3,7 +3,6 @@ package app.synchronizers.countdownlatch;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 import concurrencies.utilities.Log4jUtils;

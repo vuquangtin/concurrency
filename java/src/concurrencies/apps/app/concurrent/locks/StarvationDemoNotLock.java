@@ -2,7 +2,6 @@ package app.concurrent.locks;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.util.concurrent.locks.ReentrantLock;
 
 import javax.swing.JFrame;
 import javax.swing.JProgressBar;

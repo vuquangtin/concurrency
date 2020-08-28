@@ -1,7 +1,6 @@
 package concurrency.java.memory.model.jmm;
 
 import java.util.concurrent.Exchanger;
-import java.util.concurrent.Semaphore;
 
 /**
  * 

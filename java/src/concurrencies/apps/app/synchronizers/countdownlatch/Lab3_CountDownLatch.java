@@ -1,14 +1,15 @@
 package app.synchronizers.countdownlatch;
 
-import java.io.*;
-import java.util.*;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
 import javax.swing.JFrame;
